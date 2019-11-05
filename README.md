@@ -13,17 +13,6 @@ Nuestra aplicación consistirá en un entorno que englobará calendarios en func
 
 | Datos | Descripción. |
 | -- | -- |
-| Nombre | Consultar y responder dudas. |
-| ID | ConsultarResponder |
-| Descripción | Visualizar las preguntas recibidas por los alumnos y poder responderlas. |
-| Actores | Profesor. |
-| Precondicones | Ser profesor. |
-| Curso normal | 1.- Iniciar como profesor. 2.- Ir a una pestaña con el nombre "Enviar dudas y consultar". 3.- Acceder a una de ellas, abrirla y responder. |
-| Postcondicionales | La respuesta del profesor le llegará al alumno. |
-| Alternativas/Exepciones | Si se envía la respuesta en blanco, saltará una excepción que dice que no se puede enviar ésta en blanco. |
-
-| Datos | Descripción. |
-| -- | -- |
 | Nombre | Enviar dudas y consultar. |
 | ID | EnviarYConsultar |
 | Descripción | Recogerá cuando un alumno pregunte dudas o preguntas al profesor que sea dueño del calendario. |
@@ -32,6 +21,20 @@ Nuestra aplicación consistirá en un entorno que englobará calendarios en func
 | Curso normal | 1.- Iniciar sesión como alumno. 2.- Ir a un apartado llamado "Enviar dudas y consultar". 3.- Clickar en él. 4.- Se abre una nueva ventana con un apartado para escribir la duda y un botón para enviarla. |
 | Postcondicionales | La duda le llega al profesor correspondiente. |
 | Alternativas/Exepciones | Si se envía una duda en blanco, saltará una excepcion que dice que no se puede enviar una duda en blanco. |
+
+
+
+| Datos | Descripción. |
+| -- | -- |
+| Nombre | Ver tareas más próximas. |
+| ID | TareasProximas |
+| Descripción | Muestra en una lista las tareas próximas en un margen de 7 días. |
+| Actores | Alumno y profesor. |
+| Precondicones | El profesor tiene que haber propuesto tareas. |
+| Curso normal | 1.- Iniciar sesión. 2.- Visualizar el apartado con las tareas de los próximos 7 días. |
+| Postcondicionales | El alumno y el profesor quedan informados de las tareas a realizar. |
+| Alternativas/Exepciones | Si no hay tareas próximas, saldrá un mensaje (como alumno) diciendo: ‘¡Estás libre! Por ahora…’ |
+
 
 | Datos | Descripción. |
 | -- | -- |
