@@ -44,8 +44,18 @@ Nuestra aplicación consistirá en un entorno que englobará calendarios en func
 | Precondicones | El profesor tiene que haber propuesto tareas. |
 | Curso normal | 1.- Iniciar sesión. 2.- Visualizar el apartado con las tareas de los próximos 7 días. |
 | Postcondicionales | El alumno y el profesor quedan informados de las tareas a realizar. |
-| Alternativas/Exepciones | Si no hay tareas próximas, saldrá un mensaje (como alumno) diciendo: ‘¡Estás libre! Por ahora…’ |
+| Alternativas/Exepciones | Si no hay tareas próximas, saldrá un mensaje (como alumno) diciendo: '¡Estás libre! Por ahora…' |
 
+| Datos | Descripción. |
+| -- | -- |
+| Nombre | Enviar notificaciones. |
+| ID | EnvioNotis |
+| Descripción | El profesor podrá enviar notificaciones cuando quiera dictaminar algo importante a todos sus alumnos al instante. |
+| Actores | Profesor. |
+| Precondicones | Ser profesor. |
+| Curso normal | 1.- Iniciar sesión como profesor. 2.- Pulsar un botón con el nombre "Notificar a todos". 3.- Escribir el título, contenido y enviarlo a todos sus alumnos. |
+| Postcondicionales | Los alumnos recibirán una alerta con el mensaje del profesor. |
+| Alternativas/Exepciones | Si se envía la notificación en blanco, salta una excepción que dice que no se puede enviar ésta en blanco. |
 
 # Modelo de objetos del negocio
 
