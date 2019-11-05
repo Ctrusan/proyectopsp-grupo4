@@ -70,6 +70,18 @@ Nuestra aplicación consistirá en un entorno que englobará calendarios en func
 | Postcondicionales | El usuario o profesor entran en la aplicación. |
 | Alternativas/Exepciones | Si la cuenta introducida no existe o el usuario se ha equivocado con sus datos, sale un mensaje diciendo "Nombre y/o contraseña erróneos". |
 
+
+| Datos | Descripción. |
+| -- | -- |
+| Nombre | Leer calendario. |
+| ID | LeerCalendar |
+| Descripción | Te muestra en pantalla el calendario completo con todas la informacion necesaria que necesita saber el alumno o el profesor.(ej: exámenes, proyectos etc.). |
+| Actores | Alumno y profesor. |
+| Precondicones | Que el profesor haya creado el calendario. |
+| Curso normal | 1.- Iniciar sesión. 2.- Acceder al calendario en cuestión. 3.- Mostrarlo y visualizar las tareas que incluye. |
+| Postcondicionales | El alumno y profesor quedan informados. |
+| Alternativas/Exepciones | Si no hay ningún calendario creado, saldrá un mensaje diciendo que no hay un calendario creado y si quieres crear uno (si eres profesor); si eres alumno, saldrá un mensaje diciendo que deberás esperar. |
+
 # Modelo de objetos del negocio
 
 ## Diagrama de clases 
