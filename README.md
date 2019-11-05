@@ -23,6 +23,7 @@ Nuestra aplicación consistirá en un entorno que englobará calendarios en func
 | Postcondicionales | La duda le llega al profesor correspondiente. |
 | Alternativas/Exepciones | Si se envía una duda en blanco, saltará una excepcion que dice que no se puede enviar una duda en blanco. |
 
+![Separador](https://github.com/Ctrusan/proyectopsp-grupo4/blob/documentacion/Im%C3%A1genes/Separador.png)
 
 | Datos | Descripción. |
 | -- | -- |
@@ -35,6 +36,7 @@ Nuestra aplicación consistirá en un entorno que englobará calendarios en func
 | Postcondicionales | La respuesta del profesor le llegará al alumno. |
 | Alternativas/Exepciones | Si se envía la respuesta en blanco, saltará una excepción que dice que no se puede enviar ésta en blanco. |
 
+![Separador](https://github.com/Ctrusan/proyectopsp-grupo4/blob/documentacion/Im%C3%A1genes/Separador.png)
 
 | Datos | Descripción. |
 | -- | -- |
@@ -47,6 +49,8 @@ Nuestra aplicación consistirá en un entorno que englobará calendarios en func
 | Postcondicionales | El alumno y el profesor quedan informados de las tareas a realizar. |
 | Alternativas/Exepciones | Si no hay tareas próximas, saldrá un mensaje (como alumno) diciendo: '¡Estás libre! Por ahora…' |
 
+![Separador](https://github.com/Ctrusan/proyectopsp-grupo4/blob/documentacion/Im%C3%A1genes/Separador.png)
+
 | Datos | Descripción. |
 | -- | -- |
 | Nombre | Enviar notificaciones. |
@@ -58,7 +62,7 @@ Nuestra aplicación consistirá en un entorno que englobará calendarios en func
 | Postcondicionales | Los alumnos recibirán una alerta con el mensaje del profesor. |
 | Alternativas/Exepciones | Si se envía la notificación en blanco, salta una excepción que dice que no se puede enviar ésta en blanco. |
 
-
+![Separador](https://github.com/Ctrusan/proyectopsp-grupo4/blob/documentacion/Im%C3%A1genes/Separador.png)
 
 | Datos | Descripción. |
 | -- | -- |
@@ -71,6 +75,7 @@ Nuestra aplicación consistirá en un entorno que englobará calendarios en func
 | Postcondicionales | El usuario o profesor entran en la aplicación. |
 | Alternativas/Exepciones | Si la cuenta introducida no existe o el usuario se ha equivocado con sus datos, sale un mensaje diciendo "Nombre y/o contraseña erróneos". |
 
+![Separador](https://github.com/Ctrusan/proyectopsp-grupo4/blob/documentacion/Im%C3%A1genes/Separador.png)
 
 | Datos | Descripción. |
 | -- | -- |
@@ -83,6 +88,7 @@ Nuestra aplicación consistirá en un entorno que englobará calendarios en func
 | Postcondicionales | El alumno y profesor quedan informados. |
 | Alternativas/Exepciones | Si no hay ningún calendario creado, saldrá un mensaje diciendo que no hay un calendario creado y si quieres crear uno (si eres profesor); si eres alumno, saldrá un mensaje diciendo que deberás esperar. |
 
+![Separador](https://github.com/Ctrusan/proyectopsp-grupo4/blob/documentacion/Im%C3%A1genes/Separador.png)
 
 | Datos | Descripción. |
 | -- | -- |
@@ -95,6 +101,7 @@ Nuestra aplicación consistirá en un entorno que englobará calendarios en func
 | Postcondicionales | El calendario se actualiza dependiendo de la acción realizada. |
 | Alternativas/Exepciones | Si no hay un calendario creado, no podrá ni modificar ni eliminar; tendrá que crear el calendario previamente. |
 
+![Separador](https://github.com/Ctrusan/proyectopsp-grupo4/blob/documentacion/Im%C3%A1genes/Separador.png)
 
 | Datos | Descripción. |
 | -- | -- |
