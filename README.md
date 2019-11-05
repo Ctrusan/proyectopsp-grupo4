@@ -104,8 +104,7 @@ Nuestra aplicación consistirá en un entorno que englobará calendarios en func
 | Precondicones | Iniciar sesión como profesor. |
 | Curso normal | 1.- Iniciar sesión como profesor. 2.- Ir a un botón llamado "Crear nuevo calendario". 3. Ponerle el nombre de la materia, los alumnos cursantes de esta y crearlo. |
 | Postcondicionales | El calendario se ha creado. |
-| Alternativas/Exepciones | 1.- Si se pone un calendario sin título, saldrá una excepción diciendo que no puede estar en blanco.
-2.- Si se crea un calendario sin alumnos, saldrá una excepción diciendo que el calendario necesita al menos un alumno. 3.- Si crea un calendario con un nombre ya existente, saldrá una excepción diciendo que ya existe. |
+| Alternativas/Exepciones | 1.- Si se pone un calendario sin título, saldrá una excepción diciendo que no puede estar en blanco. 2.- Si se crea un calendario sin alumnos, saldrá una excepción diciendo que el calendario necesita al menos un alumno. 3.- Si crea un calendario con un nombre ya existente, saldrá una excepción diciendo que ya existe. |
 
 # Modelo de objetos del negocio
 
