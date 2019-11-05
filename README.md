@@ -82,6 +82,18 @@ Nuestra aplicación consistirá en un entorno que englobará calendarios en func
 | Postcondicionales | El alumno y profesor quedan informados. |
 | Alternativas/Exepciones | Si no hay ningún calendario creado, saldrá un mensaje diciendo que no hay un calendario creado y si quieres crear uno (si eres profesor); si eres alumno, saldrá un mensaje diciendo que deberás esperar. |
 
+
+| Datos | Descripción. |
+| -- | -- |
+| Nombre | Modificar calendario. |
+| ID | CambiarCalendar |
+| Descripción | Nos permite agregar o quitar información a un calendario ya creado. |
+| Actores | Profesor. |
+| Precondicones | Iniciar sesión como profesor y tener mínimo un calendario creado. |
+| Curso normal | 1.- Iniciar sesión como profesor. 2.- Acceder a su propio calendario. 3.- Pulsar sobre el botón "Añadir", "Modificar" o "Eliminar". 4.- Si pulsa "Añadir", tendrá que elegir una fecha y dentro de ésta, el nombre de la tarea. 5.- Si pulsa "Modificar", mostrar las tareas ya creadas y poder cambiarlas en su fecha y nombre. 6.- Si pulsa "Eliminar", mostrar las tareas ya creadas y eliminar la que se desee. |
+| Postcondicionales | El calendario se actualiza dependiendo de la acción realizada. |
+| Alternativas/Exepciones | Si no hay un calendario creado, no podrá ni modificar ni eliminar; tendrá que crear el calendario previamente. |
+
 # Modelo de objetos del negocio
 
 ## Diagrama de clases 
