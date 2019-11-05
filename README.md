@@ -57,6 +57,19 @@ Nuestra aplicación consistirá en un entorno que englobará calendarios en func
 | Postcondicionales | Los alumnos recibirán una alerta con el mensaje del profesor. |
 | Alternativas/Exepciones | Si se envía la notificación en blanco, salta una excepción que dice que no se puede enviar ésta en blanco. |
 
+
+
+| Datos | Descripción. |
+| -- | -- |
+| Nombre | Iniciar sesión. |
+| ID | IniciarSesion |
+| Descripción | Introduces el usuario y contraseña para acceder a los calendarios. |
+| Actores | Alumno y profesor. |
+| Precondicones | Tener una cuenta creada. |
+| Curso normal | 1.- Iniciar la aplicación. 2.- Introducir el nombre de usuario y contraseña. |
+| Postcondicionales | El usuario o profesor entran en la aplicación. |
+| Alternativas/Exepciones | Si la cuenta introducida no existe o el usuario se ha equivocado con sus datos, sale un mensaje diciendo "Nombre y/o contraseña erróneos". |
+
 # Modelo de objetos del negocio
 
 ## Diagrama de clases 
