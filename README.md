@@ -9,6 +9,97 @@ Nuestra aplicación consistirá en un entorno que englobará calendarios en func
 
 ![Casos de uso](https://github.com/Ctrusan/proyectopsp-grupo4/blob/documentacion/Im%C3%A1genes/Casos%20de%20uso.png)
 
+## Anexo.
+
+| Datos | Descripción. |
+| -- | -- |
+| Nombre | Consultar y responder dudas. |
+| ID | ConsultarResponder |
+| Descripción | Visualizar las preguntas recibidas por los alumnos y poder responderlas. |
+| Actores | Profesor. |
+| Precondicones | Ser profesor. |
+| Curso normal | 1.- Iniciar como profesor. 2.- Ir a una pestaña con el nombre "Enviar dudas y consultar". 3.- Acceder a una de ellas, abrirla y responder. |
+| Postcondicionales | La respuesta del profesor le llegará al alumno. |
+| Alternativas/Exepciones | Si se envía la respuesta en blanco, saltará una excepción que dice que no se puede enviar ésta en blanco. |
+
+| Datos | Descripción. |
+| -- | -- |
+| Nombre | Enviar dudas y consultar. |
+| ID | EnviarYConsultar |
+| Descripción | Recogerá cuando un alumno pregunte dudas o preguntas al profesor que sea dueño del calendario. |
+| Actores | Alumno |
+| Precondicones | Ser alumno. |
+| Curso normal | 1.- Iniciar sesión como alumno. 2.- Ir a un apartado llamado "Enviar dudas y consultar". 3.- Clickar en él. 4.- Se abre una nueva ventana con un apartado para escribir la duda y un botón para enviarla. |
+| Postcondicionales | La duda le llega al profesor correspondiente. |
+| Alternativas/Exepciones | Si se envía una duda en blanco, saltará una excepcion que dice que no se puede enviar una duda en blanco. |
+
+| Datos | Descripción. |
+| -- | -- |
+| Nombre | Enviar dudas y consultar. |
+| ID | EnviarYConsultar |
+| Descripción | Recogerá cuando un alumno pregunte dudas o preguntas al profesor que sea dueño del calendario. |
+| Actores | Alumno |
+| Precondicones | Ser alumno. |
+| Curso normal | 1.- Iniciar sesión como alumno. 2.- Ir a un apartado llamado "Enviar dudas y consultar". 3.- Clickar en él. 4.- Se abre una nueva ventana con un apartado para escribir la duda y un botón para enviarla. |
+| Postcondicionales | La duda le llega al profesor correspondiente. |
+| Alternativas/Exepciones | Si se envía una duda en blanco, saltará una excepcion que dice que no se puede enviar una duda en blanco. |
+
+| Datos | Descripción. |
+| -- | -- |
+| Nombre | Enviar dudas y consultar. |
+| ID | EnviarYConsultar |
+| Descripción | Recogerá cuando un alumno pregunte dudas o preguntas al profesor que sea dueño del calendario. |
+| Actores | Alumno |
+| Precondicones | Ser alumno. |
+| Curso normal | 1.- Iniciar sesión como alumno. 2.- Ir a un apartado llamado "Enviar dudas y consultar". 3.- Clickar en él. 4.- Se abre una nueva ventana con un apartado para escribir la duda y un botón para enviarla. |
+| Postcondicionales | La duda le llega al profesor correspondiente. |
+| Alternativas/Exepciones | Si se envía una duda en blanco, saltará una excepcion que dice que no se puede enviar una duda en blanco. |
+
+| Datos | Descripción. |
+| -- | -- |
+| Nombre | Enviar dudas y consultar. |
+| ID | EnviarYConsultar |
+| Descripción | Recogerá cuando un alumno pregunte dudas o preguntas al profesor que sea dueño del calendario. |
+| Actores | Alumno |
+| Precondicones | Ser alumno. |
+| Curso normal | 1.- Iniciar sesión como alumno. 2.- Ir a un apartado llamado "Enviar dudas y consultar". 3.- Clickar en él. 4.- Se abre una nueva ventana con un apartado para escribir la duda y un botón para enviarla. |
+| Postcondicionales | La duda le llega al profesor correspondiente. |
+| Alternativas/Exepciones | Si se envía una duda en blanco, saltará una excepcion que dice que no se puede enviar una duda en blanco. |
+
+| Datos | Descripción. |
+| -- | -- |
+| Nombre | Enviar dudas y consultar. |
+| ID | EnviarYConsultar |
+| Descripción | Recogerá cuando un alumno pregunte dudas o preguntas al profesor que sea dueño del calendario. |
+| Actores | Alumno |
+| Precondicones | Ser alumno. |
+| Curso normal | 1.- Iniciar sesión como alumno. 2.- Ir a un apartado llamado "Enviar dudas y consultar". 3.- Clickar en él. 4.- Se abre una nueva ventana con un apartado para escribir la duda y un botón para enviarla. |
+| Postcondicionales | La duda le llega al profesor correspondiente. |
+| Alternativas/Exepciones | Si se envía una duda en blanco, saltará una excepcion que dice que no se puede enviar una duda en blanco. |
+
+| Datos | Descripción. |
+| -- | -- |
+| Nombre | Enviar dudas y consultar. |
+| ID | EnviarYConsultar |
+| Descripción | Recogerá cuando un alumno pregunte dudas o preguntas al profesor que sea dueño del calendario. |
+| Actores | Alumno |
+| Precondicones | Ser alumno. |
+| Curso normal | 1.- Iniciar sesión como alumno. 2.- Ir a un apartado llamado "Enviar dudas y consultar". 3.- Clickar en él. 4.- Se abre una nueva ventana con un apartado para escribir la duda y un botón para enviarla. |
+| Postcondicionales | La duda le llega al profesor correspondiente. |
+| Alternativas/Exepciones | Si se envía una duda en blanco, saltará una excepcion que dice que no se puede enviar una duda en blanco. |
+
+| Datos | Descripción. |
+| -- | -- |
+| Nombre | Enviar dudas y consultar. |
+| ID | EnviarYConsultar |
+| Descripción | Recogerá cuando un alumno pregunte dudas o preguntas al profesor que sea dueño del calendario. |
+| Actores | Alumno |
+| Precondicones | Ser alumno. |
+| Curso normal | 1.- Iniciar sesión como alumno. 2.- Ir a un apartado llamado "Enviar dudas y consultar". 3.- Clickar en él. 4.- Se abre una nueva ventana con un apartado para escribir la duda y un botón para enviarla. |
+| Postcondicionales | La duda le llega al profesor correspondiente. |
+| Alternativas/Exepciones | Si se envía una duda en blanco, saltará una excepcion que dice que no se puede enviar una duda en blanco. |
+
+
 # Modelo de objetos del negocio
 
 ## Diagrama de clases 
