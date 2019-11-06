@@ -123,3 +123,21 @@ Nuestra aplicación consistirá en un entorno que englobará calendarios en func
 ## Modelo entidad-relación
 
 ![Modelo entidad-relación](https://github.com/Ctrusan/proyectopsp-grupo4/blob/documentacion/Im%C3%A1genes/Modelo%20entidad-relaci%C3%B3n.png)
+
+# Interfaz gráfica
+
+## Iniciar sesión en uCalendar
+
+![Iniciar sesión](https://github.com/Ctrusan/proyectopsp-grupo4/blob/documentacion/Im%C3%A1genes/InicioCalendario.PNG)
+
+## Vista del profesor
+
+![Vista del profesor](https://github.com/Ctrusan/proyectopsp-grupo4/blob/documentacion/Im%C3%A1genes/InterfazProfesor.PNG)
+
+## Vista del alumno
+
+![Vista del alumno](https://github.com/Ctrusan/proyectopsp-grupo4/blob/documentacion/Im%C3%A1genes/VistaAlumno.PNG)
+
+## Vista de calendario
+
+![Vista calendario](https://github.com/Ctrusan/proyectopsp-grupo4/blob/documentacion/Im%C3%A1genes/VistaCalendario.PNG)
