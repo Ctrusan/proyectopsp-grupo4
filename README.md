@@ -145,3 +145,7 @@ Nuestra aplicación consistirá en un entorno que englobará calendarios en func
 ## Vista de envío de dudas
 
 ![Vista de dudas](https://github.com/Ctrusan/proyectopsp-grupo4/blob/documentacion/Im%C3%A1genes/VistaDudas.PNG)
+
+## Consultar dudas
+
+![Consulta de dudas](https://github.com/Ctrusan/proyectopsp-grupo4/blob/documentacion/Im%C3%A1genes/VistaConsultaDudas.PNG)
