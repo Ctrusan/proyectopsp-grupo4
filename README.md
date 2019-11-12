@@ -2,6 +2,19 @@
 
 ![Portada](https://github.com/Ctrusan/proyectopsp-grupo4/blob/documentacion/Im%C3%A1genes/Calendario.jpg)
 
+Este trabajo está realizado por **José Palacios Montes y Carlos Trujillo García**. Este proyecto está bajo una licencia de *Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional*. 
+
+![Licencia](https://github.com/Ctrusan/proyectopsp-grupo4/blob/documentacion/Im%C3%A1genes/Licencia.png)
+
+# Índice
+
+1. Requisitos funcionales.
+2. Casos de uso.
+3. Modelo de objetos de negocio  
+3.1 Diagrama de clases  
+3.2 Modelo entidad-relación
+4. Interfaz gráfica
+
 # Definición del problema. Requisitos funcionales.
 
 Nuestra aplicación consistirá en un entorno que englobará calendarios en función de la cantidad de cursos que le darán uso a la app. También estaría la opción de añadir calendarios propios de las asignaturas del curso. En éstos, los profesores podrán añadir a los días lo siguiente: tareas, exámenes, trabajos, excursiones, días en los que el profesor o profesora no va a asistir por x cuestión, etcétera. Los alumnos, por otro lado, podrán visualizar los cambios que realicen los profesores al momento. Habrá una opción de correo/chat para preguntar dudas o proponer algún cambio.
