@@ -9,10 +9,15 @@ Este trabajo está realizado por **José Palacios Montes y Carlos Trujillo Garc�
 # Índice
 
 [1. Requisitos funcionales.](#1)
+<br>
 [2. Casos de uso.](#2)
+<br>
 [3. Modelo de objetos de negocio](#3)
+<br>
 [3.1 Diagrama de clases](#3.1)
+<br>
 [3.2 Modelo entidad-relación](#3.2)
+<br>
 [4. Interfaz gráfica](#4)
 
 <a name="1"></a>
