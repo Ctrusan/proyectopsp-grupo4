@@ -1,6 +1,6 @@
 # uCalendar
 
-![Portada](https://github.com/Ctrusan/proyectopsp-grupo4/blob/documentacion/Im%C3%A1genes/Encabezado.jpg)
+![Portada](https://github.com/Ctrusan/proyectopsp-grupo4/blob/documentacion/Im%C3%A1genes/Calendario.jpg)
 
 # Definición del problema. Requisitos funcionales.
 
