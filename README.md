@@ -10,10 +10,10 @@ Este trabajo está realizado por **José Palacios Montes y Carlos Trujillo Garc�
 
 [1. Requisitos funcionales.](#1)
 [2. Casos de uso.](#2)
-[3. odelo de objetos de negocio](#3)
-3.1 Diagrama de clases  
-3.2 Modelo entidad-relación
-4. Interfaz gráfica
+[3. Modelo de objetos de negocio](#3)
+[3.1 Diagrama de clases](#3.1)
+[3.2 Modelo entidad-relación](#3.2)
+[4. Interfaz gráfica](#4)
 
 <a name="1"></a>
 # Definición del problema. Requisitos funcionales.
@@ -129,16 +129,20 @@ Nuestra aplicación consistirá en un entorno que englobará calendarios en func
 | Postcondicionales | El calendario se ha creado. |
 | Alternativas/Exepciones | 1.- Si se pone un calendario sin título, saldrá una excepción diciendo que no puede estar en blanco. 2.- Si se crea un calendario sin alumnos, saldrá una excepción diciendo que el calendario necesita al menos un alumno. 3.- Si crea un calendario con un nombre ya existente, saldrá una excepción diciendo que ya existe. |
 
+<a name="3"></a>
 # Modelo de objetos del negocio
 
+<a name="3.1"></a>
 ## Diagrama de clases 
 
 ![Diagrama de clases](https://github.com/Ctrusan/proyectopsp-grupo4/blob/documentacion/Im%C3%A1genes/Diagrama%20de%20clases.png)
 
+<a name="3.2"></a>
 ## Modelo entidad-relación
 
 ![Modelo entidad-relación](https://github.com/Ctrusan/proyectopsp-grupo4/blob/documentacion/Im%C3%A1genes/Modelo%20entidad-relaci%C3%B3n.png)
 
+<a name="4"></a>
 # Interfaz gráfica
 
 ## Iniciar sesión en uCalendar
