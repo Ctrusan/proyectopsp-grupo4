@@ -12,9 +12,10 @@ Este trabajo está realizado por **José Palacios Montes y Carlos Trujillo Garc�
 <br>
 [2. Casos de uso.](#2)
 <br>
-[3. Modelo de objetos de negocio](#3)  
+[3. Modelo de objetos de negocio](#3)
 <br>
 [4. Interfaz gráfica](#4)
+
 
 <a name="1"></a>
 # Definición del problema. Requisitos funcionales.
