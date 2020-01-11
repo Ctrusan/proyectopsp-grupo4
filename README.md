@@ -36,10 +36,10 @@ Nuestra aplicación consistirá en un entorno que englobará calendarios en func
 | Descripción | Recogerá cuando un alumno pregunte dudas o preguntas al profesor que sea dueño del calendario. |
 | Actores | Alumno |
 | Precondicones | Ser alumno. |
-| Curso normal | 1.- Iniciar sesión como alumno.|
-|              |2.- Ir a un apartado llamado "Enviar dudas y consultar".| 
-|              |3.- Clickar en él.|
-|              |4.- Se abre una nueva ventana con un apartado para escribir la duda y un botón para enviarla. |
+| Curso normal | 1.- Iniciar sesión.|
+|              | 2.- Seleccionar "Enviar dudas o preguntas".| 
+|              | 3.- Se abre una nueva ventana con un apartado para escribir la duda y un botón para enviarla. |
+|              | 4.- Enviar duda o pregunta.
 | Postcondicionales | La duda le llega al profesor correspondiente. |
 | Alternativas/Exepciones | Si se envía una duda en blanco, saltará una excepcion que dice que no se puede enviar una duda en blanco. |
  
