@@ -125,12 +125,12 @@ Nuestra aplicación consistirá en un entorno que englobará calendarios en func
 | Descripción | Nos permite agregar o quitar información a un calendario ya creado. |
 | Actores | Profesor. |
 | Precondicones | Iniciar sesión como profesor y tener mínimo un calendario creado. |
-| Curso normal | 1.- Iniciar sesión como profesor.|
-|              | 2.- Acceder a su propio calendario.|
-|              | 3.- Pulsar sobre el botón "Añadir", "Modificar" o "Eliminar". |
-|              | 4.- Si pulsa "Añadir", tendrá que elegir una fecha y dentro de ésta, el nombre de la tarea.|
-|              | 5.- Si pulsa "Modificar", mostrar las tareas ya creadas y poder cambiarlas en su fecha y nombre. |
-|              |6.- Si pulsa "Eliminar", mostrar las tareas ya creadas y eliminar la que se desee. |
+| Curso normal | 1.- Iniciar sesión. |
+|              | 2.- Acceder al calendario que ha creado. |
+|              | 3.- Seleccionar "Añadir", "Modificar" o "Eliminar". |
+|              | 3.1.- Si pulsa "Añadir", tendrá que elegir una fecha y dentro de ésta, el nombre de la tarea y su descripción. |
+|              | 3.2.- Si pulsa "Modificar", se mostrarán las tareas ya creadas y podrá cambiarlas ya sea su fecha, nombre y descripción. |
+|              | 3.3.- Si pulsa "Eliminar", se mosrarán las tareas ya creadas y podrá la/s que desee. |
 | Postcondicionales | El calendario se actualiza dependiendo de la acción realizada. |
 | Alternativas/Exepciones | Si no hay un calendario creado, no podrá ni modificar ni eliminar; tendrá que crear el calendario previamente. |
 
