@@ -31,7 +31,7 @@ Nuestra aplicación consistirá en un entorno que englobará calendarios en func
 
 | Datos | Descripción. |
 | -- | -- |
-| Nombre | Enviar dudas y consultar respuestas. |
+| Nombre | Enviar dudas o preguntas. |
 | ID | EnviarYConsultar |
 | Descripción | Recogerá cuando un alumno pregunte dudas o preguntas al profesor que sea dueño del calendario. |
 | Actores | Alumno |
