@@ -52,9 +52,9 @@ Nuestra aplicación consistirá en un entorno que englobará calendarios en func
 | Descripción | Visualizar las preguntas recibidas por los alumnos y poder responderlas. |
 | Actores | Profesor |
 | Precondicones | Ser profesor. |
-| Curso normal | 1.- Iniciar como profesor.|
-|              |2.- Ir a una pestaña con el nombre "Enviar dudas y consultar".|
-|              |3.- Acceder a una de ellas, abrirla y responder. |
+| Curso normal | 1.- Iniciar sesión.|
+|              | 2.- Seleccionar "Enviar dudas y consultar".|
+|              | 3.- Seleccionar una y responder. |
 | Postcondicionales | La respuesta del profesor le llegará al alumno. |
 | Alternativas/Exepciones | Si se envía la respuesta en blanco, saltará una excepción que dice que no se puede enviar ésta en blanco. |
 
