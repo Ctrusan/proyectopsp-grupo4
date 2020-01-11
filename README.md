@@ -65,12 +65,12 @@ Nuestra aplicación consistirá en un entorno que englobará calendarios en func
 | Nombre | Ver tareas más próximas. |
 | ID | TareasProximas |
 | Descripción | Muestra en una lista las tareas próximas en un margen de 7 días. |
-| Actores | Alumno y profesor. |
+| Actores | Alumno. |
 | Precondicones | El profesor tiene que haber propuesto tareas. |
 | Curso normal | 1.- Iniciar sesión.|
-|              | 2.- Visualizar el apartado con las tareas de los próximos 7 días. |
+|              | 2.- Visualizar el apartado con las tareas de los próximos 7 días (título de la tarea, asignatura correspondiente y fecha, con su correspondiente descripción). |
 | Postcondicionales | El alumno y el profesor quedan informados de las tareas a realizar. |
-| Alternativas/Exepciones | Si no hay tareas próximas, saldrá un mensaje (como alumno) diciendo: '¡Estás libre! Por ahora…' |
+| Alternativas/Exepciones | Si no hay tareas próximas, saldrá un mensaje diciendo: '¡Estás libre! Por ahora…' |
 
 ![Separador](https://github.com/Ctrusan/proyectopsp-grupo4/blob/documentacion/Im%C3%A1genes/Separador.png)
 
