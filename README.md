@@ -111,8 +111,8 @@ Nuestra aplicación consistirá en un entorno que englobará calendarios en func
 | Actores | Alumno y profesor. |
 | Precondicones | Que el profesor haya creado el calendario. |
 | Curso normal | 1.- Iniciar sesión.|
-|              | 2.- Acceder al calendario en cuestión. |
-|              | 3.- Mostrarlo y visualizar las tareas que incluye. |
+|              | 2.- Acceder a los calendarios disponibles y escoger uno. |
+|              | 3.- Mostrar el calendario seleccionado y se visualizarán el título de las tareas que haya en éste con sus respecivas fechas. |
 | Postcondicionales | El alumno y profesor quedan informados. |
 | Alternativas/Exepciones | Si no hay ningún calendario creado, saldrá un mensaje diciendo que no hay un calendario creado y si quieres crear uno (si eres profesor); si eres alumno, saldrá un mensaje diciendo que deberás esperar. |
 
