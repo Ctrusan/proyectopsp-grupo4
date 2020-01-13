@@ -162,7 +162,7 @@ Nuestra aplicación consistirá en un entorno que englobará calendarios en func
 <a name="3.2"></a>
 ## Modelo entidad-relación
 
-![Modelo entidad-relación](https://github.com/Ctrusan/proyectopsp-grupo4/blob/documentacion/Im%C3%A1genes/Modelo%20entidad-relaci%C3%B3n.png)
+![Modelo entidad-relación](https://github.com/Ctrusan/proyectopsp-grupo4/blob/documentacion/Im%C3%A1genes/Modelo%20entidad-relaci%C3%B3n-modificado.png)
 
 <a name="4"></a>
 # Interfaz gráfica
