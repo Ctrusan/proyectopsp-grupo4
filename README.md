@@ -157,7 +157,7 @@ Nuestra aplicación consistirá en un entorno que englobará calendarios en func
 <a name="3.1"></a>
 ## Diagrama de clases 
 
-![Diagrama de clases](https://github.com/Ctrusan/proyectopsp-grupo4/blob/documentacion/Im%C3%A1genes/Diagrama%20de%20clases%20modificado.png)
+![Diagrama de clases](https://github.com/Ctrusan/proyectopsp-grupo4/blob/documentacion/Im%C3%A1genes/Diagrama%20de%20clases%20modificado%202.png)
 
 <a name="3.2"></a>
 ## Modelo entidad-relación
