@@ -1,38 +1,44 @@
 package pspgrupo4;
 
+import pspgrupo4.modelo.UsuarioVO;
+
 import java.util.Scanner;
 
 public class Hilo_IniciarSesion extends Thread {
 
     Scanner s = new Scanner(System.in);
+    UsuarioVO usuario = new UsuarioVO();
 
-    String nombreUsuario;
-    String contraseña;
+    public Hilo_IniciarSesion(UsuarioVO usuario) {
 
-    public Hilo_IniciarSesion(String nombreUsuario) {
-
-        super(nombreUsuario);
+        this.usuario = usuario;
     }
 
     public void run() {
 
-        System.out.println("Escriba la contraseña.");
-        contraseña = s.next();
+        try {
 
-        if (comprobarUsuarioContraseña(this.nombreUsuario, this.contraseña) == true) {
+        if (comprobarUsuarioContraseña(usuario.getNombre(), usuario.getContrasena()) == true) {
 
-            System.out.println("Bienvenidx a la aplicación.");
+                sleep(2000);
+                System.out.println("Bienvenidx a la aplicación.");
         }
 
         else {
 
             System.out.println("Usuario o contraseña incorrecto. Vuelva a intentarlo.");
         }
+
+        } catch (InterruptedException e) {
+
+            e.printStackTrace();
+        }
     }
 
     public boolean comprobarUsuarioContraseña(String nombreUsuario, String contraseña) {
 
         //Comprobación de que el usuario exista en la aplicación.
+        //Consultar en la base de datos y devolver true si existe.
         return true;
     }
 }
