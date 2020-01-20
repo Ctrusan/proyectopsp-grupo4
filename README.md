@@ -194,3 +194,5 @@ Nuestra aplicación consistirá en un entorno que englobará calendarios en func
 ## Consultar dudas
 
 ![Consulta de dudas](https://github.com/Ctrusan/proyectopsp-grupo4/blob/documentacion/Im%C3%A1genes/VistaConsultaDudas.PNG)
+
+# Diagramas de Secuencia
