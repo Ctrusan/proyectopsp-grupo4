@@ -15,7 +15,8 @@ Este trabajo está realizado por **José Palacios Montes y Carlos Trujillo Garc�
 [3. Modelo de objetos de negocio](#3)
 <br>
 [4. Interfaz gráfica](#4)
-
+<br>
+[5. Diagramas de secuencia](#5)
 
 <a name="1"></a>
 # Definición del problema. Requisitos funcionales.
@@ -180,6 +181,7 @@ Nuestra aplicación consistirá en un entorno que englobará calendarios en func
 
 ![Consulta de dudas](https://github.com/Ctrusan/proyectopsp-grupo4/blob/documentacion/Im%C3%A1genes/VistaConsultaDudas.PNG)
 
+<a name="5"></a>
 # Diagramas de Secuencia
 
 ## Enviar dudas o preguntas
