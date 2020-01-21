@@ -24,9 +24,11 @@ Este trabajo está realizado por **José Palacios Montes y Carlos Trujillo Garc�
 Nuestra aplicación consistirá en un entorno que englobará calendarios en función de la cantidad de cursos que le darán uso a la app. También estaría la opción de añadir calendarios propios de las asignaturas del curso. En éstos, los profesores podrán añadir a los días lo siguiente: tareas, exámenes, trabajos, excursiones, días en los que el profesor o profesora no va a asistir por x cuestión, etcétera. Los alumnos, por otro lado, podrán visualizar los cambios que realicen los profesores al momento. Habrá una opción de correo/chat para preguntar dudas o proponer algún cambio.
 
 <a name="2"></a>
-# Análisis de requisitos funcionales: Casos de uso.
+# Análisis de requisitos funcionales.
 
-![Casos de uso](https://github.com/Ctrusan/proyectopsp-grupo4/blob/documentacion/Im%C3%A1genes/CasosDeUsoModificado.png)
+## Casos de uso.
+
+![Casos de uso](https://github.com/Ctrusan/proyectopsp-grupo4/blob/documentacion/Im%C3%A1genes/Casos%20de%20uso%20modificado.png)
 
 ## Anexo.
 
