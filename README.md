@@ -76,21 +76,6 @@ Nuestra aplicación consistirá en un entorno que englobará calendarios en func
 
 | Datos | Descripción. |
 | -- | -- |
-| Nombre | Enviar notificaciones. |
-| ID | EnvioNotis |
-| Descripción | El profesor podrá enviar notificaciones cuando quiera dictaminar algo importante a todos sus alumnos al instante. |
-| Actores | Profesor. |
-| Precondicones | Ser profesor. |
-| Curso normal | 1.- Iniciar sesión.|
-|              | 2.- Seleccionar "Notificar a todos".|
-|              | 3.- Escribir el título y contenido de la notificación y enviarla a todos sus alumnos. |
-| Postcondicionales | Los alumnos recibirán una alerta con el mensaje del profesor. |
-| Alternativas/Exepciones | Si se envía la notificación en blanco, salta una excepción que dice que no se puede enviar ésta en blanco. |
-
-![Separador](https://github.com/Ctrusan/proyectopsp-grupo4/blob/documentacion/Im%C3%A1genes/Separador.png)
-
-| Datos | Descripción. |
-| -- | -- |
 | Nombre | Iniciar sesión. |
 | ID | IniciarSesion |
 | Descripción | Introduces el usuario y contraseña para acceder a los calendarios. |
