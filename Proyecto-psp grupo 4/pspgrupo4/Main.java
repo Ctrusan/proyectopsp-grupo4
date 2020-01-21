@@ -1,6 +1,4 @@
-package pspgrupo4;
-
-import pspgrupo4.modelo.UsuarioVO;
+import modelo.UsuarioVO;
 
 public class Main {
 
