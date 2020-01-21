@@ -8,9 +8,9 @@ Este trabajo está realizado por **José Palacios Montes y Carlos Trujillo Garc�
 
 # Índice
 
-[1. Requisitos funcionales.](#1)
+[1. Definición del problema.](#1)
 <br>
-[2. Casos de uso.](#2)
+[2. Análisis de requisitos funcionales.](#2)
 <br>
 [3. Modelo de objetos de negocio](#3)
 <br>
