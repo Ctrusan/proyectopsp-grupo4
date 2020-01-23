@@ -135,7 +135,7 @@ Nuestra aplicación consistirá en un entorno que englobará calendarios en func
 | Precondicones | Iniciar sesión como profesor. |
 | Curso normal | 1.- Iniciar sesión. |
 |              | 2.- Seleccionar "Crear nuevo calendario". |
-|              | 3. Crear el calendario a partir de un nombre y de los alumnos cursantes de la asignatura. |
+|              | 3. Crear un nuevo calendario en el base de datos con los alumnos ya existentes y añadirlos, comprobando a su vez que existen previamente. |
 | Postcondicionales | El calendario se ha creado. |
 | Alternativas/Exepciones | 1.- Si se pone un calendario sin título, saldrá una excepción diciendo que no puede estar en blanco.|
 |              | 2.- Si se crea un calendario sin alumnos, saldrá una excepción diciendo que el calendario necesita al menos un alumno. |
