@@ -89,7 +89,7 @@ Nuestra aplicación consistirá en un entorno que englobará calendarios en func
 |              | 3.- La base de datos comprobará que los datos introducidos son correctos. |
 |              | 4. El usuario accederá a la aplicacón.
 | Postcondicionales | El usuario o profesor entran en la aplicación. |
-| Alternativas/Exepciones | Si la cuenta introducida no existe o el usuario se ha equivocado con sus datos, sale un mensaje diciendo "Nombre y/o contraseña erróneos". |
+| Alternativas/Exepciones | Si la cuenta introducida no existe en la base de datos o el usuario se ha equivocado con sus datos en el paso número 2, sale un mensaje diciendo "Nombre y/o contraseña erróneos". |
 
 ![Separador](https://github.com/Ctrusan/proyectopsp-grupo4/blob/documentacion/Im%C3%A1genes/Separador.png)
 
