@@ -118,9 +118,9 @@ Nuestra aplicación consistirá en un entorno que englobará calendarios en func
 | Curso normal | 1.- Iniciar sesión. |
 |              | 2.- Acceder al calendario que ha creado. |
 |              | 3.- Seleccionar "Añadir", "Modificar" o "Eliminar". |
-|              | 3.1.- Si pulsa "Añadir", tendrá que elegir una fecha y dentro de ésta, el nombre de la tarea y su descripción. |
-|              | 3.2.- Si pulsa "Modificar", se mostrarán las tareas ya creadas y podrá cambiarlas ya sea su fecha, nombre y descripción. |
-|              | 3.3.- Si pulsa "Eliminar", se mostrarán las tareas ya creadas y podrá eliminar la/s que desee. |
+|              | 3.1.- Si pulsa "Añadir", creará una nueva tarea en la que tendrá que elegir su fecha y dentro de ésta, su nombre y su descripción. |
+|              | 3.2.- Si pulsa "Modificar", se consultarán en la base de datos las tareas ya existentes y se modificará una de ellas, ya sea su fecha, nombre o descripción. |
+|              | 3.3.- Si pulsa "Eliminar", se consultarán en la base de datos las tareas ya existentes y podrá eliminar la/s que desee. |
 | Postcondicionales | El calendario se actualiza dependiendo de la acción realizada. |
 | Alternativas/Exepciones | Si no hay un calendario creado, no podrá ni modificar ni eliminar; tendrá que crear el calendario previamente. |
 
