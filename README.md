@@ -104,7 +104,7 @@ Nuestra aplicación consistirá en un entorno que englobará calendarios en func
 |              | 2.- Acceder a los calendarios disponibles y escoger uno. |
 |              | 3.- Mostrar el calendario seleccionado y se visualizarán el título de las tareas que haya en éste con sus respecivas fechas. |
 | Postcondicionales | El alumno y profesor quedan informados. |
-| Alternativas/Exepciones | Si no hay ningún calendario creado, saldrá un mensaje diciendo que no hay un calendario creado y si quieres crear uno (si eres profesor); si eres alumno, saldrá un mensaje diciendo que deberás esperar. |
+| Alternativas/Exepciones | Si en el paso 2 se comprueba que no hay ningún calendario saldrá un mensaje diciendo que no hay un calendario creado y si quieres crear uno (si eres profesor); si eres alumno, saldrá un mensaje diciendo que deberás esperar. |
 
 ![Separador](https://github.com/Ctrusan/proyectopsp-grupo4/blob/documentacion/Im%C3%A1genes/Separador.png)
 
