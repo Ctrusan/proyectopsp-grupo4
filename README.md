@@ -44,7 +44,7 @@ Nuestra aplicación consistirá en un entorno que englobará calendarios en func
 |              | 3.- Se abre una nueva ventana con un apartado para escribir la duda y un botón para enviarla. |
 |              | 4.- Enviar duda o pregunta.
 | Postcondicionales | La duda le llega al profesor correspondiente. |
-| Alternativas/Exepciones | Si se envía una duda en blanco, saltará una excepcion que dice que no se puede enviar una duda en blanco. |
+| Alternativas/Exepciones | Si se envía una duda en blanco, saltará una excepcion en el paso número 4 que dice que no se puede enviar una duda en blanco. |
  
 ![Separador](https://github.com/Ctrusan/proyectopsp-grupo4/blob/documentacion/Im%C3%A1genes/Separador.png)
 
