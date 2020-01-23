@@ -84,8 +84,10 @@ Nuestra aplicación consistirá en un entorno que englobará calendarios en func
 | Descripción | Introduces el usuario y contraseña para acceder a los calendarios. |
 | Actores | Alumno y profesor. |
 | Precondicones | Tener una cuenta creada. |
-| Curso normal | 1.- Iniciar la aplicación.|
-|              | 2.- Introducir el nombre de usuario y contraseña. |
+| Curso normal | 1.- Saber cuál es el nombre de usuario y contraseña, ya que éstos se encuentran en una base de datos. Éstos se darán a través del tutor. |
+|              | 2. Introducir el nombre de usuario y contraseña
+|              | 3.- La base de datos comprobará que los datos introducidos son correctos. |
+|              | 4. El usuario accederá a la aplicacón.
 | Postcondicionales | El usuario o profesor entran en la aplicación. |
 | Alternativas/Exepciones | Si la cuenta introducida no existe o el usuario se ha equivocado con sus datos, sale un mensaje diciendo "Nombre y/o contraseña erróneos". |
 
