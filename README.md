@@ -122,7 +122,7 @@ Nuestra aplicación consistirá en un entorno que englobará calendarios en func
 |              | 3.2.- Si pulsa "Modificar", se consultarán en la base de datos las tareas ya existentes y se modificará una de ellas, ya sea su fecha, nombre o descripción. |
 |              | 3.3.- Si pulsa "Eliminar", se consultarán en la base de datos las tareas ya existentes y podrá eliminar la/s que desee. |
 | Postcondicionales | El calendario se actualiza dependiendo de la acción realizada. |
-| Alternativas/Exepciones | Si no hay un calendario creado, no podrá ni modificar ni eliminar; tendrá que crear el calendario previamente. |
+| Alternativas/Exepciones | Si no hay un calendario creado, como se ha indicado en el paso 2, no podrá ni modificar ni eliminar; tendrá que crear el calendario previamente. |
 
 ![Separador](https://github.com/Ctrusan/proyectopsp-grupo4/blob/documentacion/Im%C3%A1genes/Separador.png)
 
