@@ -22,6 +22,7 @@ public class Hilo_IniciarSesion extends Thread {
     public void run() {
 
         try {
+
                 sleep(2000);
                 vistaAlumno.setVisible(true);
                 System.out.println("Bienvenidx a la aplicación.");
