@@ -53,32 +53,11 @@ public class Controlador implements ActionListener, ListSelectionListener {
 
 
                         UsuarioVO usuario = new UsuarioVO(vista.getTextFieldUsuario(), vista.getTextFieldContrasena());
-                         ArrayList<String> calendarios= new ArrayList<String>();
-                        if (modelo.comprobar(usuario) == true) {
 
-                                if(modelo.comprobarTipo(usuario).equals("alumno")){
-                                    this.setVista(new VistaAlumno(this));
                                     Hilo_IniciarSesion hilo1= new Hilo_IniciarSesion(usuario);
-
-                                    calendarios= modelo.listaCalendario();
-                                    vistaAlumno.actualizarCalendario(calendarios);
                                     hilo1.start();
 
-                                    //   vistaAlumno.setVisible(true);
-
-
-                                }else if(modelo.comprobarTipo(usuario).equals("profesor")){
-                                    this.setVista(new VistaProfesor(this));
-                                    calendarios= modelo.listaCalendario();
-                                    vistaProfesor.actualizarCalendario(calendarios);
-                                    vistaProfesor.setVisible(true);
-                                  }
-
-                             }else {
-                            JOptionPane.showMessageDialog(null, "Usuario y/o contraseña incorrecto/s.", "Error en iniciar sesión", JOptionPane.WARNING_MESSAGE);
-                        }
-
-                        break;
+                                    break;
 
             case "Crear calendario":
 
