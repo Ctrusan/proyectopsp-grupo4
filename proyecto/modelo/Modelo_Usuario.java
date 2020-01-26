@@ -63,4 +63,22 @@ public class Modelo_Usuario {
         return null;
     }
 
+
+    public void añadirCalendario(CalendarioVO calendario){
+
+        try {
+            Connection conexion = Conexion_JDBC.conectar();
+            Statement st = conexion.createStatement();
+            String aux= "insert into CALENDARIO " + "values ('"+ calendario.getNombre()+"', '"+calendario.getContenido()+"')";
+            System.out.println(aux);
+            st.executeUpdate("insert into calendario (nombre, contenido) values ('"+ calendario.getNombre()+"', '"+calendario.getContenido()+"')" );
+            st.close();
+
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+
+
+    }
+
 }

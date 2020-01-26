@@ -46,12 +46,8 @@ public class VistaProfesor extends javax.swing.JFrame {
 
         btnDudas.setText("Dudas");
 
-        btnMensajeDirecto.setText("Enviar mensaje directo");
-        btnMensajeDirecto.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnMensajeDirectoActionPerformed(evt);
-            }
-        });
+        btnMensajeDirecto.setText("Chat");
+        btnMensajeDirecto.addActionListener(controlador);
 
         listaCalendarioCreados.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Calendario PSP", "Calendario PMDM", "..." };

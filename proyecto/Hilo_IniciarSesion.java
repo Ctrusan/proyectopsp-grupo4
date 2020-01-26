@@ -40,7 +40,7 @@ public class Hilo_IniciarSesion extends Thread {
                }else if(tipo.equals("profesor")){
                    calendario= modelo.listaCalendario();
                    vistaProfesor.actualizarCalendario(calendario);
-                   sleep(5000);
+                   sleep(2000);
                    vistaProfesor.setVisible(true);
 
                }

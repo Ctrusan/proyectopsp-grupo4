@@ -8,13 +8,16 @@ public class TareaVO {
     String descripcion;
     String titulo;
     Date fechaLimite;
+    int codigoCalendario;
 
-    public void TareaVO(int codigo, String titulo, String descripcion, Date fechaLimite) {
+    public void TareaVO(int codigo, String titulo, String descripcion, Date fechaLimite, int codigoCalendario) {
 
         this.codigo = codigo;
         this.descripcion = descripcion;
         this.titulo = titulo;
         this.fechaLimite = fechaLimite;
+        this.codigoCalendario= codigoCalendario;
+
     }
 
     public int getCodigo() {
@@ -28,4 +31,6 @@ public class TareaVO {
     public void setDescripcion(String descripcion) { this.descripcion = descripcion; }
     public Date getFechaLimite() { return fechaLimite; }
     public void setFechaLimite(Date fechaLimite) { this.fechaLimite = fechaLimite; }
+    public int getCodigoCalendario() { return codigoCalendario; }
+    public void setCodigoCalendario(int codigoCalendario) { this.codigoCalendario = codigoCalendario; }
 }
