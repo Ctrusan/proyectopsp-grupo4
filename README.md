@@ -35,8 +35,8 @@ Nuestra aplicación consistirá en un entorno que englobará calendarios en func
 | Sintaxis del método | Explicación |
 | -- | -- |
 | inciarSesion() | A la hora de iniciar sesión se comprobarán los datos introducidos en una base de datos que almacenará todos los usuarios (tanto alumnos como profesores) disponibles. Si el usuario existe y es correcta la contraseña se accederá a la aplicación por la vista "VistaCalendarioAlumno" si es alumno y si es profesor entrará en por la vista "VistaCalendarioProfesor". |
-| ID | EnviarYConsultar |
-| Descripción | Recogerá cuando un alumno pregunte dudas o preguntas al profesor que sea dueño del calendario. |
+| verCalendario() | El usuario seleccionará unos de los calendarios disponibles y esto dará acceso al método en cuestión, por lo que abrirá la vista "VistaDelCalendario" mostrando los datos del calendario seleccionado previamente. |
+| crearCalendario() | Solo se interactúa con este método habiendo entrado previamente como profesor a través del método "verCalendario". Una vez cumplido lo anterior, el método se activará pulsando un botón "Crear calendario" que abrirá una nueva vista llamada "VistaCrearCalendario", la cual tendremos que rellenar con los datos necesarios y confirmar para que se cree el nuevo calendario. |
 | Actores | Alumno |
 | Precondicones | Ser alumno. |
 | Curso normal | 1.- Iniciar sesión.|
