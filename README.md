@@ -188,30 +188,6 @@ Nuestra aplicación consistirá en un entorno que englobará calendarios en func
 <a name="5"></a>
 # Diagramas de Secuencia
 
-## Enviar dudas o preguntas
+## Enviar duda
 
-![Enviar dudas o preguntas](https://github.com/Ctrusan/proyectopsp-grupo4/blob/documentacion/Im%C3%A1genes/Diagrama%20de%20secuencia%20-%20Enviar%20y%20consultar%20dudas.png)
-
-## Consultar y responder dudas
-
-![Consultar y responder dudas](https://github.com/Ctrusan/proyectopsp-grupo4/blob/documentacion/Im%C3%A1genes/Diagrama%20de%20secuencia%20-%20Consultar%20dudas.png)
-
-## Ver tareas más próximas
-
-![Ver tareas más próximas](https://github.com/Ctrusan/proyectopsp-grupo4/blob/documentacion/Im%C3%A1genes/Diagrama%20de%20secuencia%20-%20Ver%20tareas%20m%C3%A1s%20pr%C3%B3ximas.png)
-
-## Iniciar sesión
-
-![Iniciar sesión](https://github.com/Ctrusan/proyectopsp-grupo4/blob/documentacion/Im%C3%A1genes/Diagrama%20de%20secuencia%20-%20Iniciar%20sesi%C3%B3n.png)
-
-## Leer calendario
-
-![Leer calendario](https://github.com/Ctrusan/proyectopsp-grupo4/blob/documentacion/Im%C3%A1genes/Diagrama%20de%20secuencia%20-%20Leer%20calendario.png)
-
-## Modificar calendario
-
-![Modificar calendario](https://github.com/Ctrusan/proyectopsp-grupo4/blob/documentacion/Im%C3%A1genes/Diagrama%20de%20secuencia%20-%20Modificar%20calendario.png)
-
-## Crear calendario
-
-![Crear calendario](https://github.com/Ctrusan/proyectopsp-grupo4/blob/documentacion/Im%C3%A1genes/Diagrama%20de%20secuencia%20-%20Crear%20calendario.png)
+![DS - Enviar duda](https://github.com/Ctrusan/proyectopsp-grupo4/blob/documentacion/Im%C3%A1genes/DS%20-%20Enviar%20Dudas.png)
