@@ -37,8 +37,8 @@ Nuestra aplicación consistirá en un entorno que englobará calendarios en func
 | inciarSesion() | A la hora de iniciar sesión se comprobarán los datos introducidos en una base de datos que almacenará todos los usuarios (tanto alumnos como profesores) disponibles. Si el usuario existe y es correcta la contraseña se accederá a la aplicación por la vista "VistaCalendarioAlumno" si es alumno y si es profesor entrará en por la vista "VistaCalendarioProfesor". |
 | verCalendario() | El usuario seleccionará unos de los calendarios disponibles y esto dará acceso al método en cuestión, por lo que abrirá la vista "VistaDelCalendario" mostrando los datos del calendario seleccionado previamente. |
 | crearCalendario() | Solo se interactúa con este método habiendo entrado previamente como profesor a través del método "verCalendario". Una vez cumplido lo anterior, el método se activará pulsando un botón "Crear calendario" que abrirá una nueva vista llamada "VistaCrearCalendario", la cual tendremos que rellenar con los datos necesarios y confirmar para que se cree el nuevo calendario. |
-| Actores | Alumno |
-| Precondicones | Ser alumno. |
+| crearDuda() | Solo se interactúa con este método habiendo entrado previamente como alumno. Se debe de entrar en la vista de "VistaEnviarYConsultarDudas" a través de un botón "Dudas" y una vez dentro, al pulsar el botón "Crear", nos abrirá una nueva ventana con unos campos a rellenar para posteriormente enviar la duda creada. |
+| enviarDuda() | Solo se interactúa con este método habiendo entrado previamente como alumno. Tras haber interactuado con el método "crearDuda" este método enviará la duda creada con el método anterior a una base de datos que almacenará todas las dudas existentes. |
 | Curso normal | 1.- Iniciar sesión.|
 |              | 2.- Seleccionar "Enviar dudas o preguntas".| 
 |              | 3.- Se abre una nueva ventana con un apartado para escribir la duda y un botón para enviarla. |
