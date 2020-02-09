@@ -32,9 +32,9 @@ Nuestra aplicación consistirá en un entorno que englobará calendarios en func
 
 ## Anexo.
 
-| Datos | Descripción. |
+| Sintaxis del método | Explicación |
 | -- | -- |
-| Nombre | Enviar dudas o preguntas. |
+| inciarSesion() | A la hora de iniciar sesión se comprobarán los datos introducidos en una base de datos que almacenará todos los usuarios (tanto alumnos como profesores) disponibles. Si el usuario existe y es correcta la contraseña se accederá a la aplicación por la vista "VistaCalendarioAlumno" si es alumno y si es profesor entrará en por la vista "VistaCalendarioProfesor". |
 | ID | EnviarYConsultar |
 | Descripción | Recogerá cuando un alumno pregunte dudas o preguntas al profesor que sea dueño del calendario. |
 | Actores | Alumno |
