@@ -106,3 +106,9 @@ Nuestra aplicación consistirá en un entorno que englobará calendarios en func
 ## Enviar duda
 
 ![DS - Enviar duda](https://github.com/Ctrusan/proyectopsp-grupo4/blob/documentacion/Im%C3%A1genes/DS%20-%20Enviar%20Dudas.png)
+
+# Uso de la aplicación
+
+Para usar la aplicación, lo primero que hay que hacer es acceder a la clase Main. Al ejecutarlo, se abrirá una ventana con un pequeño formulario (IniciarSesión) en el que hay que introducir el nombre de usuario y contraseñas, estando los usuarios ya creados en la base de datos. 
+
+Si accedes como alumno, se abrirá una ventana (VistaAlumno), mostrándole en esta los calendarios disponibles, pudiendo interactuar con ellos (para ver las tareas que contiene, descripción, etcétera), acceder a la opción de 'dudas' donde puede enviarlas al profesor o cerrar sesión; si accedes como profesor, se abrirá una ventana (VistaProfesor) en la que éste podrá ver los calendarios que ha creado, acceder a la opción de 'dudas' en la que podrá ver las dudas que le han llegado y responderlas o cerrar sesión, además de poder editar el calendario y crear, editar o borrar tareas.
