@@ -58,7 +58,8 @@ public class VistaProfesor extends javax.swing.JFrame {
 
         labelCalendariosCreados.setText("Calendarios creados:");
 
-        btnCerrarSesion.setText("Cerrar sesión");
+        btnCerrarSesion.setText("Cerrar sesion");
+        btnCerrarSesion.addActionListener(controlador);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

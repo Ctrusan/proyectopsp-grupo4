@@ -3,6 +3,7 @@ package proyecto.controlador;
 
 
 import proyecto.Hilo_IniciarSesion;
+import proyecto.UDPMultiChat;
 import proyecto.modelo.CalendarioVO;
 import proyecto.modelo.Modelo_Usuario;
 import proyecto.modelo.UsuarioVO;
@@ -28,7 +29,8 @@ public class Controlador implements ActionListener, ListSelectionListener {
     VistaAlumno vistaAlumno;
     VistaProfesor vistaProfesor;
     VistaAgregarCalendario vistaAgregarCalendario;
-
+    UDPMultiChat vistaChat;
+    UsuarioVO usuario = new UsuarioVO();
 
     public void setModelo(Modelo_Usuario modelo) {
         this.modelo = modelo;
@@ -45,8 +47,7 @@ public class Controlador implements ActionListener, ListSelectionListener {
     public void setVista(VistaAgregarCalendario vista) {
         this.vistaAgregarCalendario = vista;
     }
-
-
+    public void setVista(UDPMultiChat vista) { this.vistaChat = vista; }
 
     @Override
     public void actionPerformed(ActionEvent e) {
@@ -57,8 +58,7 @@ public class Controlador implements ActionListener, ListSelectionListener {
 
             case "Iniciar sesion":
 
-
-                        UsuarioVO usuario = new UsuarioVO(vista.getTextFieldUsuario(), vista.getTextFieldContrasena());
+                        usuario = new UsuarioVO(vista.getTextFieldUsuario(), vista.getTextFieldContrasena());
 
                                     Hilo_IniciarSesion hilo1= new Hilo_IniciarSesion(usuario);
                                     hilo1.start();
@@ -84,14 +84,19 @@ public class Controlador implements ActionListener, ListSelectionListener {
                         break;
 
             case "Cancelar":
-                vistaAgregarCalendario.dispose();
 
+                vistaAgregarCalendario.dispose();
+                break;
+
+            case "Cerrar sesion":
+
+                System.exit(0);
                 break;
 
             case "Chat":
 
-
-
+                vistaChat= new UDPMultiChat(usuario.getNombre());
+                vistaChat.setVisible(true);
 
         }
     }

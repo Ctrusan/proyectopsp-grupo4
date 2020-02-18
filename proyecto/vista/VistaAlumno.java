@@ -67,7 +67,8 @@ public class VistaAlumno extends javax.swing.JFrame {
         });
         jScrollPane2.setViewportView(listCalendarios);
 
-        btnCerrarSesion.setText("Cerrar sesión");
+        btnCerrarSesion.setText("Cerrar sesion");
+        btnCerrarSesion.addActionListener(controlador);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
