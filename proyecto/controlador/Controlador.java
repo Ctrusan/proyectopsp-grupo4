@@ -2,21 +2,20 @@ package proyecto.controlador;
 
 
 
+import proyecto.FTP;
 import proyecto.Hilo_IniciarSesion;
 import proyecto.UDPMultiChat;
 import proyecto.modelo.CalendarioVO;
 import proyecto.modelo.Modelo_Usuario;
 import proyecto.modelo.UsuarioVO;
-import proyecto.vista.IniciarSesion;
-import proyecto.vista.VistaAgregarCalendario;
-import proyecto.vista.VistaAlumno;
-import proyecto.vista.VistaProfesor;
+import proyecto.vista.*;
 
 import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 import java.util.ArrayList;
 
 import static com.sun.deploy.uitoolkit.ToolkitStore.dispose;
@@ -27,10 +26,11 @@ public class Controlador implements ActionListener, ListSelectionListener {
     Modelo_Usuario modelo;
     IniciarSesion vista;
     VistaAlumno vistaAlumno;
-    VistaProfesor vistaProfesor;
+    VistaProfesor2 vistaProfesor;
     VistaAgregarCalendario vistaAgregarCalendario;
     UDPMultiChat vistaChat;
     UsuarioVO usuario = new UsuarioVO();
+    String usuario2="";
 
     public void setModelo(Modelo_Usuario modelo) {
         this.modelo = modelo;
@@ -41,7 +41,7 @@ public class Controlador implements ActionListener, ListSelectionListener {
     public void setVista(VistaAlumno vista) {
         this.vistaAlumno = vista;
     }
-    public void setVista(VistaProfesor vista) {
+    public void setVista(VistaProfesor2 vista) {
         this.vistaProfesor = vista;
     }
     public void setVista(VistaAgregarCalendario vista) {
@@ -59,8 +59,9 @@ public class Controlador implements ActionListener, ListSelectionListener {
             case "Iniciar sesion":
 
                         usuario = new UsuarioVO(vista.getTextFieldUsuario(), vista.getTextFieldContrasena());
-
+                                    usuario2=vista.getTextFieldUsuario();
                                     Hilo_IniciarSesion hilo1= new Hilo_IniciarSesion(usuario);
+
                                     hilo1.start();
 
                                     break;
@@ -95,10 +96,25 @@ public class Controlador implements ActionListener, ListSelectionListener {
 
             case "Chat":
 
-                vistaChat= new UDPMultiChat(usuario.getNombre());
-                vistaChat.setVisible(true);
+            //    vistaChat= new UDPMultiChat("");
+             //   vistaChat.setVisible(true);
+                try {
+                    UDPMultiChat.main(null);
+                } catch (IOException ex) {
+                    ex.printStackTrace();
+                }
 
+                break;
+
+            case "FTP":
+                try {
+                    FTP.main(null);
+                } catch (IOException ex) {
+                    ex.printStackTrace();
+                }
+                break;
         }
+
     }
 
     @Override

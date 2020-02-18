@@ -40,6 +40,7 @@ public class VistaAlumno extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         listCalendarios = new javax.swing.JList<>();
         btnCerrarSesion = new javax.swing.JButton();
+        btnChat= new javax.swing.JButton();
 
         jLabel1.setText("Calendarios creados:");
 /*
@@ -53,6 +54,9 @@ public class VistaAlumno extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         btnDudas.setText("Dudas");
+        btnChat.setText("Chat");
+
+        btnChat.addActionListener(controlador);
 
         labelTitulo.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         labelTitulo.setText("Tus calendarios");
@@ -161,6 +165,7 @@ public class VistaAlumno extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JLabel labelTitulo;
     private javax.swing.JList<String> listCalendarios;
+    private javax.swing.JButton btnChat;
     // End of variables declaration//GEN-END:variables
 
 
