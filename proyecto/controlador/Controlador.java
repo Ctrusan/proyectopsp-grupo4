@@ -2,10 +2,7 @@ package proyecto.controlador;
 
 
 
-import proyecto.FTP;
-import proyecto.Hilo_IniciarSesion;
-import proyecto.UDPMultiChat;
-import proyecto.UDPMultiChat2;
+import proyecto.*;
 import proyecto.modelo.CalendarioVO;
 import proyecto.modelo.Modelo_Usuario;
 import proyecto.modelo.UsuarioVO;
@@ -17,6 +14,11 @@ import javax.swing.event.ListSelectionListener;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
+import java.security.InvalidKeyException;
+import java.security.KeyStoreException;
+import java.security.NoSuchAlgorithmException;
+import java.security.UnrecoverableKeyException;
+import java.security.spec.InvalidKeySpecException;
 import java.util.ArrayList;
 
 import static com.sun.deploy.uitoolkit.ToolkitStore.dispose;
@@ -65,14 +67,23 @@ public class Controlador implements ActionListener, ListSelectionListener {
 
             case "Iniciar sesion":
 
+                try {
 
 
-                                    Hilo_IniciarSesion hilo1= new Hilo_IniciarSesion(usuario);
+                    Hilo_IniciarSesion hilo1= new Hilo_IniciarSesion(usuario);
 
-                                   // nombre = vista.getTextFieldUsuario().toString();
-                                    hilo1.start();
+                    // nombre = vista.getTextFieldUsuario().toString();
+                    hilo1.start();
 
-                                    break;
+
+                } catch(Exception m) {
+
+                    m.printStackTrace();
+                }
+
+
+
+                   break;
 
             case "Crear calendario":
 
@@ -99,7 +110,22 @@ public class Controlador implements ActionListener, ListSelectionListener {
 
             case "Cerrar sesion":
 
-                System.exit(0);
+                try {
+                    ClienteSMTP.main(null);
+                    System.exit(0);
+
+                } catch (NoSuchAlgorithmException ex) {
+                    ex.printStackTrace();
+                } catch (UnrecoverableKeyException ex) {
+                    ex.printStackTrace();
+                } catch (KeyStoreException ex) {
+                    ex.printStackTrace();
+                } catch (InvalidKeyException ex) {
+                    ex.printStackTrace();
+                } catch (InvalidKeySpecException ex) {
+                    ex.printStackTrace();
+                }
+
                 break;
 
             case "Chat":
