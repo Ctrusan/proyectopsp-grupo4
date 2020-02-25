@@ -9,7 +9,7 @@ import java.net.InetAddress;
 import java.net.MulticastSocket;
 import java.net.SocketException;
 
-public class UDPMultiChat extends JFrame implements ActionListener, Runnable {
+public class UDPMultiChat2 extends JFrame implements ActionListener, Runnable {
 
     public static void main(String args[]) throws IOException {
         String nombre = JOptionPane.showInputDialog("Introduce tu nombre o nick:");
@@ -19,7 +19,7 @@ public class UDPMultiChat extends JFrame implements ActionListener, Runnable {
         // Nos unimos al grupo
         ms.joinGroup(grupo);
         if (!nombre.trim().equals("")) {
-            UDPMultiChat server = new UDPMultiChat(nombre);
+            UDPMultiChat2 server = new UDPMultiChat2(nombre);
             server.setBounds(0, 0, 540, 400);
             server.setVisible(true);
             new Thread(server).start();
@@ -46,7 +46,7 @@ public class UDPMultiChat extends JFrame implements ActionListener, Runnable {
     String nombre;
 
     // constructor
-    public UDPMultiChat(String nom) {
+    public UDPMultiChat2(String nom) {
         super(" VENTANA DE CHAT UDP - Nick: " + nom);
         //this.setTitle(nom);
         setLayout(null);

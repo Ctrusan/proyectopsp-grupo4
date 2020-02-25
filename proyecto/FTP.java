@@ -39,7 +39,7 @@ public class FTP extends JFrame {
 	String user = "usuario1";
 	String pasw = "usuario1";
 	boolean login;
-    static String direcInicial = "C:/Users/José/documentos";
+    static String direcInicial = "/";
 
     //para saber directorio y fichero seleccionado
    	static String direcSelec = direcInicial;

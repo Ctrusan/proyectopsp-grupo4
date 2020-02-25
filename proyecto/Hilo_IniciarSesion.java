@@ -4,10 +4,8 @@ package proyecto;
 import proyecto.controlador.Controlador;
 import proyecto.modelo.CalendarioVO;
 import proyecto.modelo.UsuarioVO;
-import proyecto.vista.VistaAlumno;
+import proyecto.vista.*;
 import proyecto.modelo.Modelo_Usuario;
-import proyecto.vista.VistaProfesor;
-import proyecto.vista.VistaProfesor2;
 
 import javax.swing.*;
 import java.util.ArrayList;
@@ -17,8 +15,8 @@ public class Hilo_IniciarSesion extends Thread {
 
     UsuarioVO usuario = new UsuarioVO();
     Controlador controlador= new Controlador();
-    VistaAlumno vistaAlumno= new VistaAlumno(controlador);
-    VistaProfesor2 vistaProfesor= new VistaProfesor2(controlador);
+    VistaAlumno1 vistaAlumno= new VistaAlumno1(controlador);
+    VistaProfesor1 vistaProfesor= new VistaProfesor1(controlador);
     Modelo_Usuario modelo= new Modelo_Usuario();
 
     public Hilo_IniciarSesion(UsuarioVO usuario) {

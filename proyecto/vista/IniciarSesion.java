@@ -1,7 +1,5 @@
 package proyecto.vista;
 
-
-
 import proyecto.controlador.Controlador;
 
 import javax.swing.*;
@@ -31,7 +29,7 @@ public class IniciarSesion extends javax.swing.JFrame {
         labelUsuario = new javax.swing.JLabel();
         labelContrasena = new javax.swing.JLabel();
         textFieldUsuario = new javax.swing.JTextField();
-        textFieldContrasena = new javax.swing.JTextField();
+        textFieldContrasena = new javax.swing.JPasswordField();
         btnIniciarSesion = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -151,7 +149,7 @@ public class IniciarSesion extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel labelContrasena;
     private javax.swing.JLabel labelUsuario;
-    private javax.swing.JTextField textFieldContrasena;
+    private javax.swing.JPasswordField textFieldContrasena;
     private javax.swing.JTextField textFieldUsuario;
     // End of variables declaration//GEN-END:variables
 
@@ -169,7 +167,7 @@ public class IniciarSesion extends javax.swing.JFrame {
         return aux;
     }
 
-    public void setTextFieldContrasena(JTextField textFieldContrasena) {
+    public void setTextFieldContrasena(JPasswordField textFieldContrasena) {
         this.textFieldContrasena = textFieldContrasena;
     }
 

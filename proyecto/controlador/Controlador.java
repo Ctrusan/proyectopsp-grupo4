@@ -5,6 +5,7 @@ package proyecto.controlador;
 import proyecto.FTP;
 import proyecto.Hilo_IniciarSesion;
 import proyecto.UDPMultiChat;
+import proyecto.UDPMultiChat2;
 import proyecto.modelo.CalendarioVO;
 import proyecto.modelo.Modelo_Usuario;
 import proyecto.modelo.UsuarioVO;
@@ -24,12 +25,13 @@ public class Controlador implements ActionListener, ListSelectionListener {
 
 
     Modelo_Usuario modelo;
-    IniciarSesion vista;
+    IniciarSesion vista = new IniciarSesion(this);
     VistaAlumno vistaAlumno;
-    VistaProfesor2 vistaProfesor;
+    VistaProfesor1 vistaProfesor;
     VistaAgregarCalendario vistaAgregarCalendario;
     UDPMultiChat vistaChat;
-    UsuarioVO usuario = new UsuarioVO();
+    UDPMultiChat2 vistaChat2;
+    UsuarioVO usuario;
     String usuario2="";
 
     public void setModelo(Modelo_Usuario modelo) {
@@ -41,27 +43,33 @@ public class Controlador implements ActionListener, ListSelectionListener {
     public void setVista(VistaAlumno vista) {
         this.vistaAlumno = vista;
     }
-    public void setVista(VistaProfesor2 vista) {
+    public void setVista(VistaProfesor1 vista) {
         this.vistaProfesor = vista;
     }
     public void setVista(VistaAgregarCalendario vista) {
         this.vistaAgregarCalendario = vista;
     }
     public void setVista(UDPMultiChat vista) { this.vistaChat = vista; }
+    public void setVista(UDPMultiChat2 vista) { this.vistaChat2 = vista; }
+
 
     @Override
     public void actionPerformed(ActionEvent e) {
 
-        String aux = e.getActionCommand();
+        String aux = e.getActionCommand(), nombre = vista.getTextFieldUsuario().toString();
+
+        usuario = new UsuarioVO(vista.getTextFieldUsuario(), vista.getTextFieldContrasena());
+        usuario2=vista.getTextFieldUsuario();
 
         switch (aux) {
 
             case "Iniciar sesion":
 
-                        usuario = new UsuarioVO(vista.getTextFieldUsuario(), vista.getTextFieldContrasena());
-                                    usuario2=vista.getTextFieldUsuario();
+
+
                                     Hilo_IniciarSesion hilo1= new Hilo_IniciarSesion(usuario);
 
+                                   // nombre = vista.getTextFieldUsuario().toString();
                                     hilo1.start();
 
                                     break;
@@ -96,8 +104,8 @@ public class Controlador implements ActionListener, ListSelectionListener {
 
             case "Chat":
 
-            //    vistaChat= new UDPMultiChat("");
-             //   vistaChat.setVisible(true);
+              /* vistaChat= new UDPMultiChat(usuario.getNombre());
+                vistaChat.setVisible(true);*/
                 try {
                     UDPMultiChat.main(null);
                 } catch (IOException ex) {
@@ -105,6 +113,15 @@ public class Controlador implements ActionListener, ListSelectionListener {
                 }
 
                 break;
+
+            case "Chat Alumno":
+                try {
+                    UDPMultiChat2.main(null);
+                } catch (IOException ex) {
+                    ex.printStackTrace();
+                }
+                    break;
+
 
             case "FTP":
                 try {
