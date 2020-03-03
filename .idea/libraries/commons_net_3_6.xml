@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="commons-net-3.6">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/proyecto/Librerias/commons-net-3.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/proyecto/Librerias/mysql-connector-java-8.0.12.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
