@@ -24,6 +24,8 @@ public class IniciarSesion extends javax.swing.JFrame {
      */
     private void initComponents(Controlador controlador) {
 
+
+
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         labelUsuario = new javax.swing.JLabel();

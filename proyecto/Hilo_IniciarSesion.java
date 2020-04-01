@@ -17,8 +17,8 @@ import java.util.Scanner;
 public class Hilo_IniciarSesion extends Thread {
 
     UsuarioVO usuario = new UsuarioVO();
-    Controlador controlador= new Controlador();
-    VistaAlumno vistaAlumno= new VistaAlumno(controlador);
+    static Controlador controlador= new Controlador();
+    static VistaAlumno  vistaAlumno= new VistaAlumno(controlador);
     VistaProfesor2 vistaProfesor= new VistaProfesor2(controlador);
     Modelo_Usuario modelo= new Modelo_Usuario();
     UsuariosConectados conectados = new UsuariosConectados();
@@ -27,6 +27,12 @@ public class Hilo_IniciarSesion extends Thread {
         this.usuario = usuario;
         this.conectados=usConectados;
     }
+
+    public static void CerrarVistaAlumno() {
+        vistaAlumno.dispose();
+    }
+
+
 
     public void run() {
 
@@ -44,6 +50,7 @@ public class Hilo_IniciarSesion extends Thread {
                        vistaAlumno.actualizarCalendario(calendario);
                        sleep(2000);
                        vistaAlumno.setVisible(true);
+
                    };
 
                }else if(tipo.equals("profesor")){
@@ -61,5 +68,7 @@ public class Hilo_IniciarSesion extends Thread {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+
+
     }
 }

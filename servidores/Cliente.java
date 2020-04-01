@@ -10,7 +10,7 @@ public class Cliente {
 
     public static void main(String [] args) throws IOException {
 
-        int puerto = 44441;
+       /* int puerto = 44441;
         Socket s = new Socket("localhost", puerto);
         clienteFicheros hiloC = new ClienteFicheros(s);
         hiloC.setBounds(0,0,540,500);
@@ -45,5 +45,5 @@ public class Cliente {
             e.printStackTrace();
             System.exit(0);
         }
-    }
+    */}
 }

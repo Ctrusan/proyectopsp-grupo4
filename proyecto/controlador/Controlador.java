@@ -53,7 +53,9 @@ public class Controlador implements ActionListener, ListSelectionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
 
+
         String aux = e.getActionCommand();
+        Hilo_IniciarSesion hilo1=null;
 
         switch (aux) {
 
@@ -61,10 +63,9 @@ public class Controlador implements ActionListener, ListSelectionListener {
 
                         usuario = new UsuarioVO(vista.getTextFieldUsuario(), vista.getTextFieldContrasena());
                                     usuario2=vista.getTextFieldUsuario();
-                                    Hilo_IniciarSesion hilo1= new Hilo_IniciarSesion(usConectados, usuario);
+                                    hilo1= new Hilo_IniciarSesion(usConectados, usuario);
 
                                     hilo1.start();
-
                                     break;
 
             case "Crear calendario":
@@ -92,7 +93,9 @@ public class Controlador implements ActionListener, ListSelectionListener {
 
             case "Cerrar sesion":
 
-                System.exit(0);
+                Hilo_IniciarSesion.CerrarVistaAlumno();
+
+                //System.exit(0);
                 break;
 
             case "Chat":
