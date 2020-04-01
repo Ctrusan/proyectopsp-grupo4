@@ -48,7 +48,6 @@ public class UDPMultiChat2 extends JFrame implements ActionListener, Runnable {
     // constructor
     public UDPMultiChat2(String nom) {
         super(" VENTANA DE CHAT UDP - Nick: " + nom);
-        //this.setTitle(nom);
         setLayout(null);
         this.nombre = nom;
         mensaje.setBounds(10, 10, 400, 30); add(mensaje);
