@@ -3,7 +3,7 @@ package proyecto.controlador;
 public class UsuariosConectados {
 
 private int cantidad=1;
-private boolean disponible;
+
 
 
     public synchronized int get() {
@@ -20,7 +20,7 @@ private boolean disponible;
     }
 
     public synchronized void put() {
-        while (cantidad>2) {
+        while (cantidad>4) {
             try {
                 wait();
             } catch (InterruptedException e) {
@@ -30,5 +30,7 @@ private boolean disponible;
         notifyAll();
     }
 
-
+    public void setCantidad(int cantidad) {
+        this.cantidad = cantidad-1;
+    }
 }

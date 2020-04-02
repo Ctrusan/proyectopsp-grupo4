@@ -18,7 +18,7 @@ public class Hilo_IniciarSesion extends Thread {
 
     UsuarioVO usuario = new UsuarioVO();
     static Controlador controlador= new Controlador();
-    static VistaAlumno  vistaAlumno= new VistaAlumno(controlador);
+    VistaAlumno  vistaAlumno= new VistaAlumno(controlador);
     VistaProfesor2 vistaProfesor= new VistaProfesor2(controlador);
     Modelo_Usuario modelo= new Modelo_Usuario();
     UsuariosConectados conectados = new UsuariosConectados();
@@ -28,47 +28,34 @@ public class Hilo_IniciarSesion extends Thread {
         this.conectados=usConectados;
     }
 
-    public static void CerrarVistaAlumno() {
-        vistaAlumno.dispose();
+    public UsuariosConectados getConectados() {
+        return conectados;
     }
 
 
 
     public void run() {
 
-        try {
 
-           if( modelo.comprobar(usuario)==true){
-             String tipo=  modelo.comprobarTipo(usuario);
-             ArrayList<String> calendario= new ArrayList<String>();
-               if(tipo.equals("alumno")){
-                   System.out.println("hola probando");
-                   conectados.put();
-                   System.out.println("hola p2"+conectados.get());
-                   if(conectados.get()<=3) {
-                       calendario = modelo.listaCalendario();
-                       vistaAlumno.actualizarCalendario(calendario);
-                       sleep(2000);
-                       vistaAlumno.setVisible(true);
+        if( modelo.comprobar(usuario)==true){
+          String tipo=  modelo.comprobarTipo(usuario);
 
-                   };
+            if(tipo.equals("alumno")){
 
-               }else if(tipo.equals("profesor")){
-                   calendario= modelo.listaCalendario();
-                   vistaProfesor.actualizarCalendario(calendario);
-                   sleep(2000);
-                   vistaProfesor.setVisible(true);
+                conectados.put();
 
-               }
+            }else if(tipo.equals("profesor")){
 
-           }else{
-               JOptionPane.showMessageDialog(null, "Usuario y/o contraseña incorrecto/s.", "Error en iniciar sesión", JOptionPane.WARNING_MESSAGE);
-           }
 
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+            }
+
+        }else{
+            JOptionPane.showMessageDialog(null, "Usuario y/o contraseña incorrecto/s.", "Error en iniciar sesión", JOptionPane.WARNING_MESSAGE);
         }
 
 
+    }
+
+    public void setHilo(Hilo_IniciarSesion hilo2) {
     }
 }

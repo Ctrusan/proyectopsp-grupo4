@@ -22,7 +22,7 @@ import static com.sun.deploy.uitoolkit.ToolkitStore.dispose;
 
 public class Controlador implements ActionListener, ListSelectionListener {
 
-
+    ArrayList<String> calendario= new ArrayList<String>();
     Modelo_Usuario modelo;
     IniciarSesion vista;
     VistaAlumno vistaAlumno;
@@ -32,6 +32,7 @@ public class Controlador implements ActionListener, ListSelectionListener {
     UsuarioVO usuario = new UsuarioVO();
     String usuario2="";
     UsuariosConectados usConectados = new UsuariosConectados();
+    Hilo_IniciarSesion hilo1=null;
 
     public void setModelo(Modelo_Usuario modelo) {
         this.modelo = modelo;
@@ -48,6 +49,14 @@ public class Controlador implements ActionListener, ListSelectionListener {
     public void setVista(VistaAgregarCalendario vista) {
         this.vistaAgregarCalendario = vista;
     }
+    public void setHilo(Hilo_IniciarSesion hilo){
+        this.hilo1=hilo;
+    }
+
+    public Hilo_IniciarSesion getHilo1() {
+        return hilo1;
+    }
+
     public void setVista(UDPMultiChat vista) { this.vistaChat = vista; }
 
     @Override
@@ -55,21 +64,47 @@ public class Controlador implements ActionListener, ListSelectionListener {
 
 
         String aux = e.getActionCommand();
-        Hilo_IniciarSesion hilo1=null;
+
 
         switch (aux) {
 
             case "Iniciar sesion":
 
-                        usuario = new UsuarioVO(vista.getTextFieldUsuario(), vista.getTextFieldContrasena());
-                                    usuario2=vista.getTextFieldUsuario();
-                                    hilo1= new Hilo_IniciarSesion(usConectados, usuario);
+            usuario = new UsuarioVO(vista.getTextFieldUsuario(), vista.getTextFieldContrasena());
 
-                                    hilo1.start();
-                                    break;
+            this.setHilo(new Hilo_IniciarSesion(usConectados, usuario));
+                hilo1.start();
+
+                if( modelo.comprobar(usuario)==true) {
+                    usuario2 = this.modelo.comprobarTipo(usuario);
+
+                    if (usuario2.equals("alumno")) {
+                        this.setVista(new VistaAlumno(this));
+
+                        if (hilo1.getConectados().get() <= 4) {
+                            calendario = modelo.listaCalendario();
+                            vistaAlumno.actualizarCalendario(calendario);
+                            vistaAlumno.setVisible(true);
+                        }
+
+                        else {
+
+                            JOptionPane.showMessageDialog(null, "No se pueden conectar más de 3 alumnos a la vez.", "Error en iniciar sesión", JOptionPane.WARNING_MESSAGE);
+                        }
+                    } else {
+                        this.setVista((new VistaProfesor2(this)));
+                        calendario = modelo.listaCalendario();
+                        vistaProfesor.actualizarCalendario(calendario);
+                        vistaProfesor.setVisible(true);
+
+                    }
+                }
+
+
+
+            break;
 
             case "Crear calendario":
-
 
                         this.setVista(new VistaAgregarCalendario(this));
                         vistaAgregarCalendario.setVisible(true);
@@ -83,7 +118,6 @@ public class Controlador implements ActionListener, ListSelectionListener {
 
                 this.setModelo(new Modelo_Usuario());
                         modelo.añadirCalendario(calendario);
-
                         break;
 
             case "Cancelar":
@@ -93,7 +127,8 @@ public class Controlador implements ActionListener, ListSelectionListener {
 
             case "Cerrar sesion":
 
-                Hilo_IniciarSesion.CerrarVistaAlumno();
+                vistaAlumno.dispose();
+                this.hilo1.getConectados().setCantidad(this.hilo1.getConectados().get());
 
                 //System.exit(0);
                 break;
