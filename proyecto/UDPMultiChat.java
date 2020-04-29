@@ -1,18 +1,22 @@
 package proyecto;
 
-import java.awt.event.*;
-import java.io.*;
-import java.net.*;
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.IOException;
+import java.net.DatagramPacket;
+import java.net.InetAddress;
+import java.net.MulticastSocket;
+import java.net.SocketException;
 
 public class UDPMultiChat extends JFrame implements ActionListener, Runnable {
 	private static final long serialVersionUID = 1L;
-	
+
 	static MulticastSocket ms = null;
 	static byte[] buf = new byte[1000];
 	static InetAddress grupo = null;
 	static int Puerto = 12345;// Puerto multicast
-	
+
 	static JTextField mensaje = new JTextField();
 	private JScrollPane scrollpane1;
 	static JTextArea textarea1;
@@ -45,7 +49,7 @@ public class UDPMultiChat extends JFrame implements ActionListener, Runnable {
 	// accion cuando pulsamos botones
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource() == boton) { // SE PULSA EL ENVIAR
-			String texto = nombre + ">> " + mensaje.getText();			
+			String texto = nombre + ">> " + mensaje.getText();
 			try {
 				// ENVIANDO mensaje al grupo
 				DatagramPacket paquete = new DatagramPacket(texto.getBytes(),
@@ -56,7 +60,7 @@ public class UDPMultiChat extends JFrame implements ActionListener, Runnable {
 			}
 		}
 		if (e.getSource() == desconectar) { // SE PULSA DESCONECTAR
-			String texto = "*** Abandona el chat: " + nombre + " ***";			
+			String texto = "*** Abandona el chat: " + nombre + " ***";
 			try {
 				// ENVIANDO DESPEDIDA AL GRUPO
 				DatagramPacket paquete = new DatagramPacket(texto.getBytes(),
@@ -73,10 +77,10 @@ public class UDPMultiChat extends JFrame implements ActionListener, Runnable {
 		}
 	}//
 
-	// DESDE EL M�TODO RUN SE RECIBEN LOS MENSAJES
+	// DESDE EL MÉTODO RUN SE RECIBEN LOS MENSAJES
 	//Y SE PINTAN EN LA PANTALLA
-	public void run() {	
-	 while (repetir) {
+	public void run() {
+		while (repetir) {
 			try {
 				DatagramPacket p = new DatagramPacket(buf, buf.length);
 				ms.receive(p);
@@ -87,42 +91,50 @@ public class UDPMultiChat extends JFrame implements ActionListener, Runnable {
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
-		}	 
-	}// run
-/*
-	public static void main(String args[]) throws IOException {
-		String nombre = JOptionPane
-				.showInputDialog("Introduce tu nombre o nick:");
-		// Se crea el socket multicast
-		ms = new MulticastSocket(Puerto);
-		grupo = InetAddress.getByName("225.0.0.1");// Grupo
-		// Nos unimos al grupo
-		ms.joinGroup(grupo);
-		if (!nombre.trim().equals("")) {
-			UDPMultiChat server = new UDPMultiChat(nombre);
-			server.setBounds(0, 0, 540, 400);
-			server.setVisible(true);
-			new Thread(server).start();
-
-		} else {
-			System.out.println("El nombre est� vac�o....");
 		}
-	}// main*/
+	}// run
 
 
-	public static MulticastSocket getMs() {
-		return ms;
+
+	// main
+
+	public static InetAddress getGrupo() {
+		return grupo;
 	}
 
 	public static void setGrupo(InetAddress grupo) {
 		UDPMultiChat.grupo = grupo;
 	}
 
-	public static void setMs(MulticastSocket ms) {
-		UDPMultiChat2.ms = ms;
+	public static int getPuerto() {
+		return Puerto;
 	}
 
-	public static InetAddress getGrupo() {
-		return grupo;
+	public static void setPuerto(int Puerto) {
+		UDPMultiChat.Puerto = Puerto;
+	}
+
+	public static JTextField getMensaje() {
+		return mensaje;
+	}
+
+	public static void setMensaje(JTextField mensaje) {
+		UDPMultiChat.mensaje = mensaje;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public static MulticastSocket getMs() {
+		return ms;
+	}
+
+	public static void setMs(MulticastSocket ms) {
+		UDPMultiChat.ms = ms;
 	}
 }// ..MultiChatUDP

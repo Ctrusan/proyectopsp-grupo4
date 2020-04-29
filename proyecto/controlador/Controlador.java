@@ -21,6 +21,7 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+
 public class Controlador implements ActionListener, ListSelectionListener {
 
     ArrayList<String> calendario = new ArrayList<String>();
@@ -105,7 +106,6 @@ public class Controlador implements ActionListener, ListSelectionListener {
             }
             } else if (aux.equals("Crear calendario")) {
 
-
                 this.setVista(new VistaAgregarCalendario(this));
                 vistaAgregarCalendario.setVisible(true);
             } else if (aux.equals("Crear")) {
@@ -124,11 +124,6 @@ public class Controlador implements ActionListener, ListSelectionListener {
                 vistaAlumno.dispose();
                 this.hilo1.getConectados().setCantidad(this.hilo1.getConectados().get());
 
-
-
-
-
-
                 //System.exit(0);
             } else if (aux.equals("Chat")) {
                 //    vistaChat= new UDPMultiChat("");
@@ -137,13 +132,12 @@ public class Controlador implements ActionListener, ListSelectionListener {
                 System.out.println("Entra chat usuario");
                 UDPMultiChat chatuser = new UDPMultiChat("user");
 
-                String nombrechat = "asd";
+                String nombrechat = "joseluis";
                 // Se crea el socket multicast
                 chatuser.setMs(new MulticastSocket(12345));
                 chatuser.setGrupo(InetAddress.getByName("225.0.0.1"));// Grupo
-                System.out.println("pronado esto");
                 // Nos unimos al grupo
-                //chatuser.getMs().joinGroup(chatuser.getGrupo());
+               chatuser.getMs().joinGroup(chatuser.getGrupo());
                 if (!nombrechat.trim().equals("")) {
                     UDPMultiChat server = new UDPMultiChat(nombrechat);
                     server.setBounds(0, 0, 540, 400);
@@ -156,11 +150,6 @@ public class Controlador implements ActionListener, ListSelectionListener {
             }
 
 
-
-
-
-
-
             } else if (aux.equals("FTP")) {
 
                 try {
@@ -170,9 +159,6 @@ public class Controlador implements ActionListener, ListSelectionListener {
                 }
             }
         }
-
-
-
     @Override
     public void valueChanged(ListSelectionEvent e) {
 
