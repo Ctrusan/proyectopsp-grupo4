@@ -1,7 +1,6 @@
 package proyecto.controlador;
 
 
-
 import proyecto.FTP;
 import proyecto.Hilo_IniciarSesion;
 import proyecto.UDPMultiChat;
@@ -18,11 +17,9 @@ import java.awt.event.ActionListener;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import static com.sun.deploy.uitoolkit.ToolkitStore.dispose;
-
 public class Controlador implements ActionListener, ListSelectionListener {
 
-    ArrayList<String> calendario= new ArrayList<String>();
+    ArrayList<String> calendario = new ArrayList<String>();
     Modelo_Usuario modelo;
     IniciarSesion vista;
     VistaAlumno vistaAlumno;
@@ -30,34 +27,41 @@ public class Controlador implements ActionListener, ListSelectionListener {
     VistaAgregarCalendario vistaAgregarCalendario;
     UDPMultiChat vistaChat;
     UsuarioVO usuario = new UsuarioVO();
-    String usuario2="";
+    String usuario2 = "";
     UsuariosConectados usConectados = new UsuariosConectados();
-    Hilo_IniciarSesion hilo1=null;
+    Hilo_IniciarSesion hilo1 = null;
 
     public void setModelo(Modelo_Usuario modelo) {
         this.modelo = modelo;
     }
+
     public void setVista(IniciarSesion vista) {
         this.vista = vista;
     }
+
     public void setVista(VistaAlumno vista) {
         this.vistaAlumno = vista;
     }
+
     public void setVista(VistaProfesor2 vista) {
         this.vistaProfesor = vista;
     }
+
     public void setVista(VistaAgregarCalendario vista) {
         this.vistaAgregarCalendario = vista;
     }
-    public void setHilo(Hilo_IniciarSesion hilo){
-        this.hilo1=hilo;
+
+    public void setHilo(Hilo_IniciarSesion hilo) {
+        this.hilo1 = hilo;
     }
 
     public Hilo_IniciarSesion getHilo1() {
         return hilo1;
     }
 
-    public void setVista(UDPMultiChat vista) { this.vistaChat = vista; }
+    public void setVista(UDPMultiChat vista) {
+        this.vistaChat = vista;
+    }
 
     @Override
     public void actionPerformed(ActionEvent e) {
@@ -66,95 +70,89 @@ public class Controlador implements ActionListener, ListSelectionListener {
         String aux = e.getActionCommand();
 
 
-        switch (aux) {
-
-            case "Iniciar sesion":
+        if (aux.equals("Iniciar sesion")) {
 
             usuario = new UsuarioVO(vista.getTextFieldUsuario(), vista.getTextFieldContrasena());
 
             this.setHilo(new Hilo_IniciarSesion(usConectados, usuario));
-                hilo1.start();
+            hilo1.start();
 
-                if( modelo.comprobar(usuario)==true) {
-                    usuario2 = this.modelo.comprobarTipo(usuario);
+            if (modelo.comprobar(usuario) == true) {
+                usuario2 = this.modelo.comprobarTipo(usuario);
 
-                    if (usuario2.equals("alumno")) {
-                        this.setVista(new VistaAlumno(this));
+                if (usuario2.equals("alumno")) {
+                    this.setVista(new VistaAlumno(this));
 
-                        if (hilo1.getConectados().get() <= 4) {
-                            calendario = modelo.listaCalendario();
-                            vistaAlumno.actualizarCalendario(calendario);
-                            vistaAlumno.setVisible(true);
-                        }
-
-                        else {
-
-                            JOptionPane.showMessageDialog(null, "No se pueden conectar más de 3 alumnos a la vez.", "Error en iniciar sesión", JOptionPane.WARNING_MESSAGE);
-                        }
-                    } else {
-                        this.setVista((new VistaProfesor2(this)));
+                    if (hilo1.getConectados().get() <= 4) {
                         calendario = modelo.listaCalendario();
-                        vistaProfesor.actualizarCalendario(calendario);
-                        vistaProfesor.setVisible(true);
+                        vistaAlumno.actualizarCalendario(calendario);
+                        vistaAlumno.setVisible(true);
+                    } else {
 
+                        JOptionPane.showMessageDialog(null, "No se pueden conectar más de 3 alumnos a la vez.", "Error en iniciar sesión", JOptionPane.WARNING_MESSAGE);
                     }
+                } else {
+                    this.setVista((new VistaProfesor2(this)));
+                    calendario = modelo.listaCalendario();
+                    vistaProfesor.actualizarCalendario(calendario);
+                    vistaProfesor.setVisible(true);
+
                 }
+            }
+            } else if (aux.equals("Crear calendario")) {
 
 
+                this.setVista(new VistaAgregarCalendario(this));
+                vistaAgregarCalendario.setVisible(true);
+            } else if (aux.equals("Crear")) {
 
-            break;
-
-            case "Crear calendario":
-
-                        this.setVista(new VistaAgregarCalendario(this));
-                        vistaAgregarCalendario.setVisible(true);
-                        break;
-
-            case "Crear":
-
-                CalendarioVO calendario= new CalendarioVO();
+                CalendarioVO calendario = new CalendarioVO();
                 calendario.setNombre(vistaAgregarCalendario.getTextFieldNombreCalendario());
                 calendario.setContenido(vistaAgregarCalendario.getTextFieldDescripcionCalendario());
 
                 this.setModelo(new Modelo_Usuario());
-                        modelo.añadirCalendario(calendario);
-                        break;
-
-            case "Cancelar":
+                modelo.añadirCalendario(calendario);
+            } else if (aux.equals("Cancelar")) {
 
                 vistaAgregarCalendario.dispose();
-                break;
-
-            case "Cerrar sesion":
+            } else if (aux.equals("Cerrar sesion")) {
 
                 vistaAlumno.dispose();
                 this.hilo1.getConectados().setCantidad(this.hilo1.getConectados().get());
 
+
+
+
+
+
                 //System.exit(0);
-                break;
-
-            case "Chat":
-
-            //    vistaChat= new UDPMultiChat("");
-             //   vistaChat.setVisible(true);
+            } else if (aux.equals("Chat")) {
+                //    vistaChat= new UDPMultiChat("");
+                //   vistaChat.setVisible(true);
                 try {
+                    UDPMultiChat chat= new UDPMultiChat("prueba");
                     UDPMultiChat.main(null);
                 } catch (IOException ex) {
                     ex.printStackTrace();
                 }
 
-                break;
 
-            case "FTP":
+
+
+
+
+
+            } else if (aux.equals("FTP")) {
+
                 try {
                     FTP.main(null);
                 } catch (IOException ex) {
                     ex.printStackTrace();
                 }
-                break;
+            }
         }
 
-    }
+
 
     @Override
     public void valueChanged(ListSelectionEvent e) {
