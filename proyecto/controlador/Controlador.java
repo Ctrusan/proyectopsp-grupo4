@@ -15,7 +15,11 @@ import javax.swing.event.ListSelectionListener;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
+import java.net.InetAddress;
+import java.net.MulticastSocket;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class Controlador implements ActionListener, ListSelectionListener {
 
@@ -129,12 +133,27 @@ public class Controlador implements ActionListener, ListSelectionListener {
             } else if (aux.equals("Chat")) {
                 //    vistaChat= new UDPMultiChat("");
                 //   vistaChat.setVisible(true);
-                try {
-                    UDPMultiChat chat= new UDPMultiChat("prueba");
-                    UDPMultiChat.main(null);
-                } catch (IOException ex) {
-                    ex.printStackTrace();
+            try {
+                System.out.println("Entra chat usuario");
+                UDPMultiChat chatuser = new UDPMultiChat("user");
+
+                String nombrechat = "asd";
+                // Se crea el socket multicast
+                chatuser.setMs(new MulticastSocket(12345));
+                chatuser.setGrupo(InetAddress.getByName("225.0.0.1"));// Grupo
+                System.out.println("pronado esto");
+                // Nos unimos al grupo
+                //chatuser.getMs().joinGroup(chatuser.getGrupo());
+                if (!nombrechat.trim().equals("")) {
+                    UDPMultiChat server = new UDPMultiChat(nombrechat);
+                    server.setBounds(0, 0, 540, 400);
+                    server.setVisible(true);
+                    new Thread(server).start();
+
                 }
+            } catch (IOException ex) {
+                Logger.getLogger(Controlador.class.getName()).log(Level.SEVERE, null, ex);
+            }
 
 
 

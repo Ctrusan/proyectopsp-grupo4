@@ -73,7 +73,7 @@ public class UDPMultiChat extends JFrame implements ActionListener, Runnable {
 		}
 	}//
 
-	// DESDE EL MÉTODO RUN SE RECIBEN LOS MENSAJES
+	// DESDE EL Mï¿½TODO RUN SE RECIBEN LOS MENSAJES
 	//Y SE PINTAN EN LA PANTALLA
 	public void run() {	
 	 while (repetir) {
@@ -89,7 +89,7 @@ public class UDPMultiChat extends JFrame implements ActionListener, Runnable {
 			}
 		}	 
 	}// run
-
+/*
 	public static void main(String args[]) throws IOException {
 		String nombre = JOptionPane
 				.showInputDialog("Introduce tu nombre o nick:");
@@ -105,7 +105,24 @@ public class UDPMultiChat extends JFrame implements ActionListener, Runnable {
 			new Thread(server).start();
 
 		} else {
-			System.out.println("El nombre está vacío....");
+			System.out.println("El nombre estï¿½ vacï¿½o....");
 		}
-	}// main
+	}// main*/
+
+
+	public static MulticastSocket getMs() {
+		return ms;
+	}
+
+	public static void setGrupo(InetAddress grupo) {
+		UDPMultiChat.grupo = grupo;
+	}
+
+	public static void setMs(MulticastSocket ms) {
+		UDPMultiChat2.ms = ms;
+	}
+
+	public static InetAddress getGrupo() {
+		return grupo;
+	}
 }// ..MultiChatUDP
