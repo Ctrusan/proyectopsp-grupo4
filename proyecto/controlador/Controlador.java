@@ -132,7 +132,7 @@ public class Controlador implements ActionListener, ListSelectionListener {
                 System.out.println("Entra chat usuario");
                 UDPMultiChat chatuser = new UDPMultiChat("user");
 
-                String nombrechat = "joseluis";
+                String nombrechat = usuario.getNombre();
                 // Se crea el socket multicast
                 chatuser.setMs(new MulticastSocket(12345));
                 chatuser.setGrupo(InetAddress.getByName("225.0.0.1"));// Grupo

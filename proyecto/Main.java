@@ -17,11 +17,10 @@ public class Main {
         Controlador controlador= new Controlador();
         IniciarSesion vista= new IniciarSesion(controlador);
         Modelo_Usuario modelo= new Modelo_Usuario();
-         controlador.setModelo(modelo);
-         controlador.setVista(vista);
+        controlador.setModelo(modelo);
+        controlador.setVista(vista);
 
          vista.setVisible(true);
-
 
     }
 }
