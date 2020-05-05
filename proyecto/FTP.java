@@ -36,8 +36,8 @@ public class FTP extends JFrame {
     //Datos del servidor FTP
 	static FTPClient cliente = new FTPClient();//cliente FTP
 	String servidor = "localhost";
-	String user = "usuario1";
-	String pasw = "usuario1";
+	String user = "joseluis";
+	String pasw = "123";
 	boolean login;
     static String direcInicial = "/";
 
@@ -123,7 +123,7 @@ public class FTP extends JFrame {
 
 			      //elemento seleccionado de la lista
 				  String fic = listaDirec.getSelectedValue().toString();
-
+					System.out.println("fic"+ fic);
 			      if (listaDirec.getSelectedIndex() == 0) {
 			          //Se hace clic en el primer elemento del JList
 			          if (!fic.equals(direcInicial)) {	
@@ -320,9 +320,17 @@ public class FTP extends JFrame {
 			if (!(files[i].getName()).equals(".")
 					&& !(files[i].getName()).equals("..")) {
 				String f = files[i].getName();				
-				if (files[i].isDirectory()) 
-					f = "(DIR) " + f;				
-				modeloLista.addElement(f);				
+				if (files[i].isDirectory()) {
+					f = "(DIR) " + f;
+				}
+
+				else {
+
+					f = "(FIC) " + f;
+				}
+
+				modeloLista.addElement(f);
+
 			}//if
 		}// fin for
 		try {	

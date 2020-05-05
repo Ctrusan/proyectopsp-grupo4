@@ -104,10 +104,12 @@ public class Controlador implements ActionListener, ListSelectionListener {
 
                 }
             }
+
             } else if (aux.equals("Crear calendario")) {
 
                 this.setVista(new VistaAgregarCalendario(this));
                 vistaAgregarCalendario.setVisible(true);
+
             } else if (aux.equals("Crear")) {
 
                 CalendarioVO calendario = new CalendarioVO();
@@ -116,9 +118,11 @@ public class Controlador implements ActionListener, ListSelectionListener {
 
                 this.setModelo(new Modelo_Usuario());
                 modelo.añadirCalendario(calendario);
+
             } else if (aux.equals("Cancelar")) {
 
                 vistaAgregarCalendario.dispose();
+
             } else if (aux.equals("Cerrar sesion")) {
 
                 vistaAlumno.dispose();
@@ -126,9 +130,11 @@ public class Controlador implements ActionListener, ListSelectionListener {
 
                 //System.exit(0);
             } else if (aux.equals("Chat")) {
+
                 //    vistaChat= new UDPMultiChat("");
                 //   vistaChat.setVisible(true);
             try {
+
                 System.out.println("Entra chat usuario");
                 UDPMultiChat chatuser = new UDPMultiChat("user");
 
@@ -138,13 +144,14 @@ public class Controlador implements ActionListener, ListSelectionListener {
                 chatuser.setGrupo(InetAddress.getByName("225.0.0.1"));// Grupo
                 // Nos unimos al grupo
                chatuser.getMs().joinGroup(chatuser.getGrupo());
+
                 if (!nombrechat.trim().equals("")) {
                     UDPMultiChat server = new UDPMultiChat(nombrechat);
                     server.setBounds(0, 0, 540, 400);
                     server.setVisible(true);
                     new Thread(server).start();
-
                 }
+
             } catch (IOException ex) {
                 Logger.getLogger(Controlador.class.getName()).log(Level.SEVERE, null, ex);
             }
