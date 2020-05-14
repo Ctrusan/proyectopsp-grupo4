@@ -48,7 +48,7 @@ public class VistaProfesor2 extends javax.swing.JFrame {
         btnChat.setText("Chat");
         btnChat.addActionListener(controlador);
 
-        btnDudas.setText("Dudas");
+        btnDudas.setText("Serv Archivos");
         btnDudas.addActionListener(controlador);
 
         btnFTP.setText("FTP");

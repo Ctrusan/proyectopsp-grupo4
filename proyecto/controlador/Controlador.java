@@ -1,6 +1,5 @@
 package proyecto.controlador;
 
-
 import proyecto.FTP;
 import proyecto.Hilo_IniciarSesion;
 import proyecto.UDPMultiChat;
