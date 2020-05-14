@@ -8,6 +8,7 @@ import proyecto.modelo.CalendarioVO;
 import proyecto.modelo.Modelo_Usuario;
 import proyecto.modelo.UsuarioVO;
 import proyecto.vista.*;
+import servidores.clienteFicheros;
 
 import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
@@ -18,6 +19,7 @@ import java.io.IOException;
 import java.net.InetAddress;
 import java.net.MulticastSocket;
 import java.util.ArrayList;
+import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -35,6 +37,9 @@ public class Controlador implements ActionListener, ListSelectionListener {
     String usuario2 = "";
     UsuariosConectados usConectados = new UsuariosConectados();
     Hilo_IniciarSesion hilo1 = null;
+
+
+    Scanner sc = new Scanner(System.in);
 
     public void setModelo(Modelo_Usuario modelo) {
         this.modelo = modelo;
@@ -104,73 +109,73 @@ public class Controlador implements ActionListener, ListSelectionListener {
 
                 }
             }
+        } else if (aux.equals("Crear calendario")) {
 
-            } else if (aux.equals("Crear calendario")) {
+            this.setVista(new VistaAgregarCalendario(this));
+            vistaAgregarCalendario.setVisible(true);
+        } else if (aux.equals("Crear")) {
 
-                this.setVista(new VistaAgregarCalendario(this));
-                vistaAgregarCalendario.setVisible(true);
+            CalendarioVO calendario = new CalendarioVO();
+            calendario.setNombre(vistaAgregarCalendario.getTextFieldNombreCalendario());
+            calendario.setContenido(vistaAgregarCalendario.getTextFieldDescripcionCalendario());
 
-            } else if (aux.equals("Crear")) {
+            this.setModelo(new Modelo_Usuario());
+            modelo.añadirCalendario(calendario);
+        } else if (aux.equals("Cancelar")) {
 
-                CalendarioVO calendario = new CalendarioVO();
-                calendario.setNombre(vistaAgregarCalendario.getTextFieldNombreCalendario());
-                calendario.setContenido(vistaAgregarCalendario.getTextFieldDescripcionCalendario());
+            vistaAgregarCalendario.dispose();
+        } else if (aux.equals("Cerrar sesion")) {
 
-                this.setModelo(new Modelo_Usuario());
-                modelo.añadirCalendario(calendario);
+            vistaAlumno.dispose();
+            this.hilo1.getConectados().setCantidad(this.hilo1.getConectados().get());
 
-            } else if (aux.equals("Cancelar")) {
+            //System.exit(0);
+        } else if (aux.equals("Chat")) {
 
-                vistaAgregarCalendario.dispose();
-
-            } else if (aux.equals("Cerrar sesion")) {
-
-                vistaAlumno.dispose();
-                this.hilo1.getConectados().setCantidad(this.hilo1.getConectados().get());
-
-                //System.exit(0);
-            } else if (aux.equals("Chat")) {
-
-                //    vistaChat= new UDPMultiChat("");
-                //   vistaChat.setVisible(true);
             try {
-
-                System.out.println("Entra chat usuario");
                 UDPMultiChat chatuser = new UDPMultiChat("user");
-
+                System.out.println("Entrando ususario");
                 String nombrechat = usuario.getNombre();
                 // Se crea el socket multicast
+
                 chatuser.setMs(new MulticastSocket(12345));
                 chatuser.setGrupo(InetAddress.getByName("225.0.0.1"));// Grupo
-                // Nos unimos al grupo
-               chatuser.getMs().joinGroup(chatuser.getGrupo());
 
+                // Nos unimos al grupo
+                chatuser.getMs().joinGroup(chatuser.getGrupo());
                 if (!nombrechat.trim().equals("")) {
                     UDPMultiChat server = new UDPMultiChat(nombrechat);
                     server.setBounds(0, 0, 540, 400);
                     server.setVisible(true);
                     new Thread(server).start();
-                }
 
+                }
             } catch (IOException ex) {
                 Logger.getLogger(Controlador.class.getName()).log(Level.SEVERE, null, ex);
             }
 
 
-            } else if (aux.equals("FTP")) {
+        } else if (aux.equals("FTP")) {
 
-                try {
-                    FTP.main(null);
-                } catch (IOException ex) {
-                    ex.printStackTrace();
-                }
+            try {
+                FTP.main(null);
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
+        } else if ( aux.equals("Serv Archivos")){
+
+
+            try{
+                clienteFicheros.main(null);
+            }catch (IOException ex) {
+                JOptionPane.showMessageDialog(null, "El servidor no está habilitado, inténtelo más tarde"," Error", JOptionPane.WARNING_MESSAGE);
+
             }
         }
+    }
     @Override
     public void valueChanged(ListSelectionEvent e) {
 
 
     }
 }
-
-

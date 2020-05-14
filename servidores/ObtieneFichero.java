@@ -1,16 +1,16 @@
 package servidores;
 
-public class ObtieneFichero {
+import java.io.Serializable;
 
-    byte [] contenidoFichero;
+@SuppressWarnings("serial")
+public class ObtieneFichero implements Serializable {
+	byte[] contenidoFichero;
 
-    public ObtieneFichero(byte [] contenidoFichero) {
+	public ObtieneFichero(byte[] contenidoFichero) {
+		this.contenidoFichero = contenidoFichero;
+	}
 
-        this.contenidoFichero = contenidoFichero;
-    }
-
-    public byte[] getContenidoFichero() {
-
-        return contenidoFichero;
-    }
+	public byte[] getContenidoFichero() {
+		return contenidoFichero;
+	}
 }
