@@ -207,6 +207,8 @@ public class Controlador implements ActionListener, ListSelectionListener {
 
 
 
+        }else if(aux.equals("Leer Correo")){
+
         }
 
     }
