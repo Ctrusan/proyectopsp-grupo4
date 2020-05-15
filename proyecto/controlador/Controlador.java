@@ -1,10 +1,7 @@
 package proyecto.controlador;
 
 import org.apache.commons.net.smtp.AuthenticatingSMTPClient;
-import proyecto.ClienteSMTP;
-import proyecto.FTP;
-import proyecto.Hilo_IniciarSesion;
-import proyecto.UDPMultiChat;
+import proyecto.*;
 import proyecto.modelo.CalendarioVO;
 import proyecto.modelo.Modelo_Usuario;
 import proyecto.modelo.UsuarioVO;
@@ -208,6 +205,10 @@ public class Controlador implements ActionListener, ListSelectionListener {
 
 
         }else if(aux.equals("Leer Correo")){
+
+            ClientePOP3 clientePop = new ClientePOP3();
+            clientePop.main(null);
+
 
         }
 

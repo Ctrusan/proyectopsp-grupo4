@@ -12,7 +12,9 @@ public class ClientePOP3 {
 
     public static void main(String [] args) {
 
-        String server = "localhost", username = "usu1", password = "usu1";
+        String server = "localhost";
+        String username = "usu1";
+        String password = "valleinclan";
         int puerto = 110;
 
         POP3SClient pop3 = new POP3SClient();
@@ -38,6 +40,8 @@ public class ClientePOP3 {
                 else
 
                     System.out.println("Nº de mensajes: " + men.length);
+                RecuperarCabeceras(men,pop3);
+                Recuperarmensajes(men,pop3);
                     pop3.logout();
             }
 
@@ -48,6 +52,7 @@ public class ClientePOP3 {
             e.printStackTrace();
             System.exit(1);
         }
+
 
         System.exit(0);
     }
