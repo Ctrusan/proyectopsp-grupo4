@@ -1,5 +1,7 @@
 package proyecto.controlador;
 
+import org.apache.commons.net.smtp.AuthenticatingSMTPClient;
+import proyecto.ClienteSMTP;
 import proyecto.FTP;
 import proyecto.Hilo_IniciarSesion;
 import proyecto.UDPMultiChat;
@@ -17,6 +19,11 @@ import java.awt.event.ActionListener;
 import java.io.IOException;
 import java.net.InetAddress;
 import java.net.MulticastSocket;
+import java.security.InvalidKeyException;
+import java.security.KeyStoreException;
+import java.security.NoSuchAlgorithmException;
+import java.security.UnrecoverableKeyException;
+import java.security.spec.InvalidKeySpecException;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.logging.Level;
@@ -31,6 +38,7 @@ public class Controlador implements ActionListener, ListSelectionListener {
     VistaAlumno vistaAlumno;
     VistaProfesor2 vistaProfesor;
     VistaAgregarCalendario vistaAgregarCalendario;
+    VistaEnviarCorreo vistaEnviarCorreo;
     UDPMultiChat vistaChat;
     UsuarioVO usuario = new UsuarioVO();
     String usuario2 = "";
@@ -71,6 +79,8 @@ public class Controlador implements ActionListener, ListSelectionListener {
     public void setVista(UDPMultiChat vista) {
         this.vistaChat = vista;
     }
+
+    public void setVista(VistaEnviarCorreo vistaEnviarCorreo) { this.vistaEnviarCorreo = vistaEnviarCorreo; }
 
     @Override
     public void actionPerformed(ActionEvent e) {
@@ -124,11 +134,23 @@ public class Controlador implements ActionListener, ListSelectionListener {
 
             vistaAgregarCalendario.dispose();
         } else if (aux.equals("Cerrar sesion")) {
-
+/*
             vistaAlumno.dispose();
             this.hilo1.getConectados().setCantidad(this.hilo1.getConectados().get());
-
-            //System.exit(0);
+            try {
+                ClienteSMTP.main(null);
+            } catch (NoSuchAlgorithmException ex) {
+                ex.printStackTrace();
+            } catch (UnrecoverableKeyException ex) {
+                ex.printStackTrace();
+            } catch (KeyStoreException ex) {
+                ex.printStackTrace();
+            } catch (InvalidKeyException ex) {
+                ex.printStackTrace();
+            } catch (InvalidKeySpecException ex) {
+                ex.printStackTrace();
+            }
+            //System.exit(0);*/
         } else if (aux.equals("Chat")) {
 
             try {
@@ -170,7 +192,23 @@ public class Controlador implements ActionListener, ListSelectionListener {
                 JOptionPane.showMessageDialog(null, "El servidor no está habilitado, inténtelo más tarde"," Error", JOptionPane.WARNING_MESSAGE);
 
             }
+        } else if(aux.equals("Enviar Correo")){
+
+                this.setVista(new VistaEnviarCorreo(this));
+                vistaEnviarCorreo.setVisible(true);
+
+        } else if( aux.equals("Enviar")){
+            String to= vistaEnviarCorreo.getTo();
+            String asunto= vistaEnviarCorreo.getAsunto();
+            String mensaje= vistaEnviarCorreo.getMensaje();
+
+            ClienteSMTP cliente = new ClienteSMTP();
+            cliente.enviarCorreo(to,asunto,mensaje);
+
+
+
         }
+
     }
     @Override
     public void valueChanged(ListSelectionEvent e) {

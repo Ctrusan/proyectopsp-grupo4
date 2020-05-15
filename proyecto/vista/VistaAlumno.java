@@ -53,7 +53,8 @@ public class VistaAlumno extends javax.swing.JFrame {
 */
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        btnDudas.setText("Dudas");
+        btnDudas.setText("Enviar Correo");
+        btnDudas.addActionListener(controlador);
         btnChat.setText("Chat");
 
         btnChat.addActionListener(controlador);

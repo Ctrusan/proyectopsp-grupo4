@@ -12,8 +12,6 @@ import javax.net.ssl.KeyManagerFactory;
 import org.apache.commons.net.smtp.*;
 
 public class ClienteSMTP {
-	public static void main(String[] args) throws NoSuchAlgorithmException, UnrecoverableKeyException,
-			KeyStoreException, InvalidKeyException, InvalidKeySpecException {
 
 		// se crea cliente SMTP seguro
 		AuthenticatingSMTPClient client = new AuthenticatingSMTPClient();
@@ -24,6 +22,8 @@ public class ClienteSMTP {
 		String password = "valleinclan";
 		int puerto = 587;
 		String remitente = "ctrusan@gmail.com";
+
+		public void enviarCorreo(String destinatario, String asunto, String mensaje) {
 
 		try {
 			int respuesta;
@@ -58,15 +58,15 @@ public class ClienteSMTP {
 				// se realiza la autenticación con el servidor
 				if (client.auth(AuthenticatingSMTPClient.AUTH_METHOD.LOGIN, username, password)) {
 					System.out.println("4 - " + client.getReplyString());
-					String destino1 = "ctrusan@gmail.com";
-					String asunto = "Correo de aviso";
-					String mensaje = "Ha cerrado sesión un usuario.";
+
+
+
 					// se crea la cabecera
-					SimpleSMTPHeader cabecera = new SimpleSMTPHeader(remitente, destino1, asunto);
+					SimpleSMTPHeader cabecera = new SimpleSMTPHeader(remitente, destinatario, asunto);
 
 					// el nombre de usuario y el email de origen coinciden
 					client.setSender(remitente);
-					client.addRecipient(destino1);
+					client.addRecipient(destinatario);
 					System.out.println("5 - " + client.getReplyString());
 
 					// se envia DATA
@@ -99,8 +99,18 @@ public class ClienteSMTP {
 			System.err.println("Could not connect to server.");
 			e.printStackTrace();
 			System.exit(1);
+		} catch (NoSuchAlgorithmException e) {
+			e.printStackTrace();
+		} catch (UnrecoverableKeyException e) {
+			e.printStackTrace();
+		} catch (InvalidKeyException e) {
+			e.printStackTrace();
+		} catch (InvalidKeySpecException e) {
+			e.printStackTrace();
+		} catch (KeyStoreException e) {
+			e.printStackTrace();
 		}
-		try {
+			try {
 			client.disconnect();
 		} catch (IOException f) {
 			f.printStackTrace();
